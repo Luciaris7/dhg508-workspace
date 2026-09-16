@@ -9,7 +9,8 @@ Week 3 作业：**来源 → 文本 → 数据 → 小库 → 一个 skill**。
 | `records.json` | 从公开史料抽出的 38 条史事；每条带 `year`、`date`、`event`、`place`、`people`、`source`、`note` |
 | `build_db.py` | 用 Python 标准库 `sqlite3` 把 `records.json` 建成 `data.db`（仅标准库，无第三方依赖） |
 | `data.db` | SQLite 数据库：一张表 `events`，38 行 |
-| `SKILL.md` | 给 agent 的说明书：这里有什么 + 五条规矩 + 两种说话方式 |
+| `SKILL.md` | 给 agent 的说明书：这里有什么 + 六条规矩 + 两种说话方式 |
+| `trial.md` | 挑战 4 的试跑记录：四种问法（有据、异说、拒绝、人物模拟）的实际问答 |
 
 ## 怎么用
 
