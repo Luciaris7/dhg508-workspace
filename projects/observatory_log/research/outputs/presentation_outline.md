@@ -30,9 +30,9 @@
 
 | 文献 | 论点 | 解释哪条机制 | 状态 |
 |---|---|---|---|
-| **Kirkland**〈Gothic Videogames, Survival Horror, and the *Silent Hill* Series〉*Gothic Studies* 14:2 (2012), 106–122 | 哥特传统（异世界侵入、碎裂叙事、过去侵入现在）在生存恐怖游戏里被改写成可玩形式 | ③ 日常的异常 · ⑥ 内在的恐怖 | **已读摘要**（第 106 页） |
-| **Costikyan** *Uncertainty in Games* (MIT Press, 2013) | 游戏的张力来自由规则管理的不确定性 | ① 低信息 | 线索，正文未读 |
-| **Stobbart** *Videogames and Horror* (UWP, 2019) | 恐怖游戏把玩家的能动性当作可被剥夺的对象 | ② 不可逃脱 | 线索，正文未读 |
+| **Kirkland**〈Gothic Videogames, Survival Horror, and the *Silent Hill* Series〉*Gothic Studies* 14:2 (2012), 106–122 | 哥特传统（异世界侵入、碎裂叙事、过去侵入现在）在生存恐怖游戏里被改写成可玩形式 | ③ 日常的异常 · ⑥ 内在的恐怖 | **已读摘要**（第 106 页）；正文付费墙 |
+| **Kjeldgaard-Christiansen & Clasen**〈Threat Simulation in Virtual Limbo〉*JGVW* 11:2 (2019) | 恐怖游戏是有安全边界的威胁模拟；怕黑是因为黑暗限制了信息 | ① 低信息 · ② 不可逃脱 | **已读全文**（预印本；摘要、第 4、11 页） |
+| **Tinwell, Grimshaw & Williams**〈Uncanny Behaviour in Survival Horror Games〉*JGVW* 2:1 (2010), 3–25 | 动作与声音的不协调放大诡异感；最不同步的角色最可怕 | ⑤ 低画质恐怖谷 | **已读全文**（接受稿；摘要第 1 页） |
 
 ---
 

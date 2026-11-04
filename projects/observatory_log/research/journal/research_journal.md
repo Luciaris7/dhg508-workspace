@@ -7,6 +7,47 @@
 
 ---
 
+## 2026-11-04 · 把文献真正读到手
+
+**问题 / 想法。** 上一版三篇里有两篇是"线索"（Costikyan、Stobbart），都闭源。老师要我
+把文献读完，所以我去找能真正读到的版本。
+
+**检索或阅读。** 先查两本书的开放获取状态：OpenAlex 显示 Costikyan 的
+`oa_status: closed`、无摘要字段；Stobbart 同样闭源、无摘要。查了 Stobbart 的作者页，
+她在 Lancaster 机构库有开放稿，但都不是 *Videogames and Horror* 本身。
+
+于是换策略：加 `is_oa:true` 重新检索，找**承担同样论证位置**且**能真正读到**的论文。
+一次查询命中两篇：
+
+- **Kjeldgaard-Christiansen & Clasen**,〈Threat Simulation in Virtual Limbo〉, *JGVW*
+  11:2 (2019)——Aarhus 预印本。
+- **Tinwell, Grimshaw & Williams**,〈Uncanny Behaviour in Survival Horror Games〉,
+  *JGVW* 2:1 (2010), 3–25——Bolton 接受稿。
+
+**来源与定位。** `web_fetch` 不支持 PDF，所以用 `Invoke-WebRequest` 下载到
+`sources/raw/`，再用 Python 的 `pypdf` 提取文本。读到并记录：
+
+- Kjeldgaard-Christiansen & Clasen，第 4 页：我们怕黑，因为黑暗「limits our access to
+  information about our surroundings」；第 11 页：恐怖游戏的吸引力在于提供「safe
+  experience with prototypical fear scenarios」。
+- Tinwell 等，摘要（接受稿第 1 页）：动作与声音「exaggerate the uncanny phenomenon」，
+  「the least synchronized were perceived to be the most frightening」。
+
+**我的想法。** 第一篇那句"黑暗限制信息"几乎是替我写的机制一——我原来只能说"我故意不给
+你看"，现在可以说"信息受限本身就是威胁信号"。
+
+但我不接受它的结论：他们说玩家最终会获得**掌控感（mastery）**，所以恐怖游戏是愉快的。
+我的游戏第七天剥夺控制、不给回报。这不是我没想到，这是我对那套解释的反问。
+
+第二篇解决了我一直说不清的问题：为什么低画质会更可怕。答案是**不同步**——动作、表情、
+声音对不上。320×180 天然对不上。
+
+**设计变更。** 设计文档 §四 重写：三篇全部换成读过版本，并在 4.1 末尾写明我与
+Kjeldgaard-Christiansen & Clasen 的分歧（掌控感 vs 剥夺控制），这成了"我的贡献"的第二层。
+
+**下一步。** 把七款游戏的截图配上，让"来源"不只是文字。
+
+---
 ## 2026-11-04 · 我说的来源是游戏，不是文献
 
 **问题 / 想法。** 展示前一天，我推翻了第二版。问题出在最根本的一步：**我把灵感来源搞错了。**

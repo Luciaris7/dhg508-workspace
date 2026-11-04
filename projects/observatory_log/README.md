@@ -10,7 +10,7 @@
 
 - **文化来源 = 七款游戏**：Iron Lung · 无声狂啸 · Fears to Fathom · 看火人 ·
   Chilla's Art · Sally Face · 寂静岭
-- **分析工具 = 三篇游戏研究**：Kirkland (2012) · Costikyan (2013) · Stobbart (2019)
+- **分析工具 = 三篇游戏研究**：Kjeldgaard-Christiansen & Clasen (2019) · Tinwell et al. (2010) · Kirkland (2012)
 
 文献**不是**灵感来源。它们是用来解释这些手法为什么有效的。
 
@@ -37,8 +37,10 @@ DAIHUM Reslides。源文件在 Reslides 仓库：
 
 | 文献 | 状态 |
 | --- | --- |
+| Kjeldgaard-Christiansen & Clasen (2019) | **已读全文**（Aarhus 预印本） |
+| Tinwell, Grimshaw & Williams (2010) | **已读全文**（Bolton 接受稿） |
 | Kirkland (2012) | **已读摘要**（第 106 页）；正文付费墙 |
-| Costikyan (2013) | 线索，正文未读 |
-| Stobbart (2019) | 线索，正文未读 |
+
+三篇全部可获取；前两篇 PDF 已存入 `sources/raw/`。
 
 未读的不作引用，不编页码。

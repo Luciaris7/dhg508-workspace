@@ -18,3 +18,6 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+
+# Downloaded source PDFs: recorded in sources/raw/MANIFEST.md instead of committed
+sources/raw/*.pdf
