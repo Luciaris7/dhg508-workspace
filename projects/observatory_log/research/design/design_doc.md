@@ -1,195 +1,181 @@
-# Design Document · Observatory Log (《观测站日志》)
+# 设计文档 · 观测站日志（Observatory Log）
 
-> Week 9 · Situate and Explain Your AI Design. This is the **current design**.
-> Reasoning, searches and source checks live in the
-> [research journal](../journal/research_journal.md); the sourced list of works
-> is the [bibliography](../references/bibliography.md).
+> 第九週 · 将你的 AI 设计放进学术讨论，并清楚解释它。本文是**当前设计**。
+> 推演过程、检索记录与来源核查在[研究日志](../journal/research_journal.md)；
+> 带出处的文献表在[书目](../references/bibliography.md)。
 
-**Project files**
+**项目文件**
 
-- [Research journal](../journal/research_journal.md)
-- [Bibliography](../references/bibliography.md)
-- [Presentation outline](../outputs/presentation_outline.md)
+- [研究日志](../journal/research_journal.md)
+- [书目与检索记录](../references/bibliography.md)
+- [十分钟展示大纲](../outputs/presentation_outline.md)
 
-**Scope:** a seven-day, single-ending, single-player game of roughly sixty
-minutes; no combat, no fail state in the work routine, no save system enabled.
+**范围**：七日流程、单一结局、单人游戏，约六十分钟；没有战斗、工作流程内没有失败
+状态、存档系统默认关闭。
 
-## 1. Idea and question
+---
 
-*Observatory Log* is a 2D side-scrolling pixel horror game played across seven
-in-game days. The player is the new caretaker of a remote observation station in
-northern Canada. The job is narrow and explicit: keep the generator running, draw
-water, aim the antenna, record the star chart, and submit a daily report. Nothing
-else is asked.
+## 一、构想与问题
 
-The question the project is built around:
+《观测站日志》是一款 2D 横版像素恐怖游戏，玩家在七个游戏日内扮演加拿大北部一座
+偏远观测站的新任看守。工作范围窄而明确：维持发电机、去湖边打水、调整天线、记录
+星图、提交当日汇报。除此之外没有别的要求。
 
-> **What happens to a bureaucratic record when the thing it is supposed to record
-> stops being recordable?**
+整个项目围绕一个问题：
 
-The game answers this as a design problem rather than as a theme. The player's
-only channel to the institution is a form with two buttons, **Yes** and **No**.
-As an anomaly grows in the sky, that form does not break. It becomes *more*
-insistent: from Day 6 it rejects every answer except Yes. The player keeps filing
-after they have stopped being able to see honestly, and the paperwork keeps
-accepting them.
+> **当一份官僚记录所记录的东西不再可被记录时，这份记录会怎样？**
 
-## 2. Design
+游戏把这个问题当作**设计问题**而不是主题来回答。玩家与机构之间唯一的通道，是一张
+只有两个按钮的表单：**Yes** 与 **No**。当天上的异常逐日变大，这张表并没有坏掉——
+它变得**更强硬**：从第六天起，它拒绝 Yes 以外的任何答案。玩家在自己已经无法诚实
+观看之后仍在继续填表，而文书系统继续接受他们。
 
-### 2.1 The daily loop (mechanics)
+---
 
-Each day runs the same five nodes, gated in order: refuel the generator → draw
-water at the lake → aim the antenna → record the star chart → submit the report.
-Completing the first flow turns the outdoor light to dusk; completing the second
-runs a fifteen-second sunset into night. **Observation always happens after
-dark.** The player cannot skip a node, and cannot do them out of order.
+## 二、设计
 
-The loop is deliberately *undramatic*. Refuelling is hold-to-fill; drawing water
-is a single press; aiming the antenna is a small rotation puzzle with a tolerance
-of three degrees and a readout that says only `SEARCHING`, `GETTING CLOSER`,
-`LOCKED`. There is no fail state in the routine. The only thing the player can do
-wrong is file a report the form does not want.
+### 2.1 每日循环（机制）
 
-### 2.2 The form (the central mechanic)
+每一天走同样五个节点，且顺序被强制：发电机加油 → 湖边打水 → 调整天线 → 记录星图
+→ 提交汇报。完成第一道流程，户外转为黄昏；完成第二道，用十五秒日落转入夜晚。
+**观测永远发生在天黑之后。** 玩家不能跳过节点，也不能乱序。
 
-The report window asks one question and offers `Yes` / `No`. On Days 1–5 both
-answers advance the day, but they are not the same day: on Day 3, `No` sends the
-player outside to inspect the antenna before bed; on Day 4, `No` triggers wiping
-the screen and taking a sleeping pill. From Day 6 the field rejects anything that
-is not `Yes`, prints `Type Yes` in red, and leaves the rejected text in the box.
+这个循环刻意**不戏剧化**。加油是长按；打水是单次按键；调天线是一个 ±3 度容差的
+旋转小操作，读数只会说 `SEARCHING` / `GETTING CLOSER` / `LOCKED`。例行工作没有失败
+状态。玩家唯一能"做错"的事，是提交一张表格不想要的答案。
 
-This is the part of the design I care most about. The form is not a menu; it is an
-instrument the player operates, and it has its own preferences.
+### 2.2 表格（核心机制）
 
-### 2.3 The chart (graphics as evidence)
+汇报窗口只问一个问题，只给 `Yes` / `No`。第一至五天两个答案都能推进，但它们不是
+同一天：第三天选 `No`，玩家必须在睡前走到屋外检查天线；第四天选 `No`，会触发擦拭
+屏幕与服用安眠药。从第六天起，输入框拒绝 Yes 以外的任何内容，用红字显示
+`Type Yes`，并且**把被拒绝的文字留在框里**。
 
-The star chart is drawn procedurally: a fixed field of stars, a horizon, and one
-small body that changes between days. On Day 3 it is six pixels across and sits
-near the edge; by Day 6 it is sixty pixels and has moved inward. The player is
-never shown the object directly in the sky; they see it **as a difference in a
-chart they drew themselves**. The only visual record of the anomaly is the record
-the job asks them to make.
+这是我最在意的一部分。表单不是一个菜单，而是一件玩家要亲自操作的**仪器**，而且它
+有自己的偏好。
 
-### 2.4 The desktop (environment, and the counter-form)
+### 2.3 星图（画面即证据）
 
-The station computer is a Windows-XP-like desktop with three documents. On Day 2
-a fourth icon appears — a blood-stained goat skull labelled *The Gift of X* —
-with no installation step and no explanation. It is a playable arcade game: a
-boat, reefs, a score. It is the only thing on the desktop that is not work, and
-the only thing that gives the player a number that goes up.
+星图是程序绘制的：一片固定的星场、一条地平线，以及一颗会在不同日子改变的星体。
+第三天它直径 6 像素、靠近边缘；到第六天是 60 像素、位置向内移动；第七天 160 像素。
+玩家从来不会在天空里直接看到这个天体，他们看到的是**自己绘制的星图上的一处差异**。
+异常的视觉记录，只有这份工作要求他们做的记录。
 
-The desktop is also where the ending happens: on Day 7 the report is filed, the
-desktop blacks out, and a line appears in red — `BEHOLD HER THRONE, LAMB` — before
-the player is walked, without control, to the lake.
+### 2.4 桌面（环境，也是反形式）
 
-### 2.5 Sound and silence
+站内电脑是一个仿 Windows XP 的桌面，上面有三个文档。第二天，第四个图标凭空出现
+——一枚沾血的羊头骨，标注 *The Gift of X*——没有安装过程，也没有任何解释。它是一个
+可玩的街机游戏：一条船、礁石、分数。它是桌面上唯一不属于工作的东西，也是唯一会给
+玩家一个**他们想要的**数字的东西。
 
-There is no audio. This began as a limitation and has become a decision I have to
-either own or fix: the storm, the generator and the wind are all silent, and the
-only voice in the game is the predecessor's voicemail at the start. I record it as
-a **known gap**, not as an artistic choice, because I have not yet tested whether
-silence helps or merely reads as unfinished.
+桌面同时也是结局发生的地方：第七天提交汇报后，桌面渐黑，红字浮出
+`BEHOLD HER THRONE, LAMB`，随后玩家在失去控制的情况下被带到湖边。
 
-## 3. Evidence and scholarly conversation
+### 2.5 声音与沉默
 
-I am working with three works, cited in full with locators in the
-[bibliography](../references/bibliography.md). What follows distinguishes what I
-have actually read (an abstract, in full) from what is still a lead.
+**游戏没有音频。** 最初这是限制，现在它是我必须要么承担、要么修掉的一个决定：暴雨、
+发电机与风声全部静音，全局唯一的人声是开场前任看守的语音留言。我在本文把它记为
+**已知缺口**，而不是艺术选择——因为我还没有验证过，沉默究竟在制造气氛，还是只是
+看起来没做完。
 
-### 3.1 Observation is a sustained, collective achievement — Daston
+---
 
-Lorraine Daston argues that scientific observation should be treated as an
-*ontology-making* practice rather than as a problem of perception. Her abstract
-proposes "a turn toward ontology — more specifically, toward ontologies created
-and sustained by observation", and frames the older debate as the "interaction of
-subjective and objective factors in scientific inquiry" (Daston 2008, abstract,
-p. 97).
+## 三、证据与学术对话
 
-This is the argument my chart mechanic is built on. The player does not observe an
-object; they sustain an ontology — a small, repeated, conventional set of marks
-that makes an object *count* as observed. When the anomaly grows, nothing in the
-sky changes for the player, because the sky is not the interface. The chart is.
+我总共使用三项文献，完整出处与定位见[书目](../references/bibliography.md)。以下明确
+区分"我真正读过的"（一篇摘要，全文通读）与"目前仍是线索的"。
 
-**What I take:** observation is maintained, not received; a game can model the
-maintenance.
-**Where I diverge:** Daston describes how a community trains and stabilises
-seeing. My station has a community of one, and the training manual is a text file.
+### 3.1 观察是被维持的集体成就——Daston
 
-### 3.2 The document is the genre that makes knowledge administrable — Gitelman
+Lorraine Daston 主张，科学观察应当被当作一种**制造本体**的实践，而不是知觉问题。
+她的摘要提出"转向本体论——更准确地说，转向由观察所创造并维持的本体论"，并把此前的
+争论概括为"科学探究中主观因素与客观因素的互动"（Daston 2008，摘要，第 97 页）。
 
-Lisa Gitelman treats documents not as containers of knowledge but as a media genre
-with its own history, arguing that paperwork is where knowing and showing are made
-to coincide.
+星图机制就建立在这个论点上。玩家不是在观察一个对象，而是在维持一套本体——一组微小、
+重复、约定俗成的标记，正是这套标记让某个东西**算得上**被观察到。当异常变大时，玩家
+眼前的天空其实什么都没变，因为天空不是界面，星图才是。
 
-*Reading status: metadata verified (Duke University Press, 2014, DOI
-10.1215/9780822376767); the book itself is not yet read — this is currently a
-**lead**, and the sentence above is my expectation of it, not a finding.*
+**我取用的**：观察是靠维持的，不是靠接收的；游戏可以模拟这种"维持"。
+**我偏离的**：Daston 描述的是一个共同体如何训练并稳定"看"的能力；我的观测站只有
+一个人，训练手册是一个 txt 文件。
 
-**What I expect to take:** the report form is not a neutral window onto the
-anomaly; it is the thing that decides what an anomaly can be. That is exactly the
-behaviour I implemented when the form starts refusing `No`.
-**What I must check before presenting:** whether Gitelman makes this claim about
-forms specifically, and where.
+### 3.2 文件是让知识可被行政处理的媒介——Gitelman
 
-### 3.3 The eerie is an absence that should not be there — Fisher
+Lisa Gitelman 不把文件当作知识的容器，而把它当作一种有自身历史的媒介类型，主张文书
+正是"知道"与"展示"被凑合在一起的地方。
 
-Mark Fisher separates the *weird* (a thing that should not exist) from the *eerie*
-(a presence where there should be nothing, or an absence where there should be
-something). The northern station is built almost entirely out of the second
-category: no other people, a predecessor who left, a job whose whole content is
-waiting, and an instrument that reports a difference.
+*阅读状态：元数据已核实（Duke University Press, 2014，DOI 10.1215/9780822376767）；
+正文尚未阅读——目前是**线索**，上面这句是我对它的预期，不是已核实的研究发现。*
 
-*Reading status: metadata verified (Repeater, 2016; OpenAlex W2799136475 gives
-2017 for the deposited manuscript); the book is not yet read — also a **lead**. I
-know the distinction by reputation and must locate the passage before quoting it.*
+**我预期取用的**：汇报表单不是观察异常的透明窗口，而是决定"什么才算异常"的东西。
+这正是我在表单开始拒绝 `No` 时实现的行为。
+**上课前必须核实**：Gitelman 是否真的就"表单"本身做出这个主张，以及在哪一章哪一页。
 
-**What I expect to take:** the horror should come from the routine rather than
-from a monster; the player's fear is produced by a form that keeps working.
+### 3.3 eerie 是不该有的缺席——Fisher
 
-### 3.4 My contribution
+Mark Fisher 区分 **weird**（本不该存在的东西）与 **eerie**（本该空无的地方却有东西，
+或本该有东西的地方却空无）。这座北方观测站几乎完全由第二类构成：没有别人、一个离开
+了的前任、一份内容就是等待的工作，以及一台只会报告"差异"的仪器。
 
-The three works give me: observation as sustained practice (Daston), the document
-as the genre that makes observation administrable (Gitelman), and the eerie as a
-structural absence (Fisher). My design's contribution puts pressure on the seam
-between them:
+*阅读状态：元数据已核实（Repeater, 2016；OpenAlex 记录 W2799136475 将存放稿标为
+2017）；正文尚未阅读——同样是**线索**。我凭二手印象知道这个区分，引用前必须找到原文
+页码。*
 
-> **The form outlives the observation.** In *Observatory Log* the report is the
-> last system to fail. The player can no longer see honestly, the chart is
-> dominated by the anomaly, the antenna is overgrown — and the form still accepts
-> a Yes, and the day still advances, and the record still looks complete.
+**我预期取用的**：恐怖应当来自例行公事，而不是来自怪物；玩家的恐惧由一张仍在运作的
+表格产生。
 
-That is a claim about bureaucratic objectivity that I have not seen made as a
-*playable* mechanism: not "the institution is blind", which is a theme, but "the
-institution's instrument still works after its operator has stopped", which the
-player experiences as a button that will not take No for an answer.
+### 3.4 我的贡献
 
-The secondary contribution is the counter-form: *The Gift of X* is the only
-interface in the game that returns a number the player wants. Play is what the
-form cannot record.
+三项文献分别给我：观察作为被维持的实践（Daston）、文件作为让观察可被行政处理的媒介
+（Gitelman）、eerie 作为结构性的缺席（Fisher）。我的设计在这三者之间的接缝上施压：
 
-## 4. Technical stack
+> **表格比观察活得更久。** 在《观测站日志》里，汇报是最后一个失效的系统。玩家已经无法
+> 诚实观看，星图被异常占满，天线被血肉覆盖——而表单仍然收下 Yes，日子仍然推进，
+> 记录仍然看起来完整。
 
-| Technology | Role | Why | Limits |
+这是一个关于官僚客观性的主张，而我尚未见到它以**可玩机制**的形式被提出：不是"机构是
+盲的"（那是主题），而是"机构的仪器在操作者停下之后仍然工作"——玩家体验到的，是一个
+不肯接受 No 的按钮。
+
+次要贡献是**反形式**：*The Gift of X* 是游戏中唯一会给玩家一个他想要的数字的界面。
+游戏性是表格无法记录的东西。
+
+---
+
+## 四、技术栈
+
+| 技术 | 在本项目中的作用 | 为什么选它 | 局限 |
 | --- | --- | --- | --- |
-| **Godot 4.7.2 / GDScript** | engine and all game logic | free, scriptable, strong 2D, exports to web and desktop; headless mode makes automated testing possible | GDScript is loosely typed at the edges; some errors surface only at runtime |
-| **Procedural drawing** (`CanvasItem` calls) | almost all art: terrain, trees, station, chart, ending | keeps the pixel grid exact at 320×180, no asset pipeline, no filtering artefacts, and every element is parameterised so it can be tested | no shader pipeline, so the Day 4 "blur" is a tear effect rather than a real blur; procedural art caps scene detail |
-| **Fixed virtual resolution** 320×180 world / 640×360 desktop, integer scaling | composition | guarantees the player stays on the horizontal centre and the ground row is fixed, which is a stated design rule | text below ~10 px is unreadable; the desktop has to switch the viewport to avoid half-scale text |
-| **Headless test gates** (414 module checks, a 112-check full seven-day playthrough, a pixel-level movement test) | correctness | the day loop, the gating order and the movement rule are verified by machine rather than by eye | gates that read back rendered pixels cannot run headless, so two of them need a window |
-| **Built-in `draw_string` + one font** | all text | one font keeps the interface coherent | the day-title font atlases exist but are not wired in yet |
+| **Godot 4.7.2 / GDScript** | 引擎与全部游戏逻辑 | 免费、可脚本化、2D 支持强，且有无头（headless）模式，可以不开窗口跑测试 | GDScript 在边界处类型松散，部分错误只在运行时暴露 |
+| **程序化绘制**（`CanvasItem` 调用） | 几乎全部美术：地形、树、观测站、星图、结局 | 把像素精确锁在 320×180 的网格上，没有素材管线、没有滤波伪影；每个元素都是带参数的函数，因此可被测试 | 没有着色器管线，所以第四天的"模糊"其实是撕裂拖影；程序化美术也限制了场景细节上限 |
+| **固定虚拟分辨率** 320×180 世界 / 640×360 桌面，整数缩放 | 构图 | 让两条硬性设计规则变成**构造保证**：玩家永远在水平中心、地面行固定 | 10 px 以下的文字不可读；桌面必须切换视口，否则文字被半速缩小 |
+| **无头测试门禁**（414 项模块检查、112 项完整七日通关、像素级移动规则测试） | 正确性 | 整个每日循环、门控顺序与移动规则由机器验证，而不是靠肉眼看 | 需要读回渲染像素的两道门禁不能无头运行，必须开窗口 |
+| **内置 `draw_string` + 单一字体** | 全部文字 | 一种字体让界面统一 | 逐日标题字体图集已经做好，但还没接入 |
 
-No audio subsystem, no save system enabled, no network component. The web build
-and the desktop build share one source tree.
+没有音频子系统、没有启用存档、没有网络组件。网页版与桌面版共用同一份源码。
 
-## 5. Open questions and next steps
+---
 
-1. **Read Gitelman and Fisher properly.** Both are currently leads. I need at
-   least one located passage from each before the presentation, or I must present
-   them explicitly as expectations rather than as findings.
-2. **Test the silence.** Is the absence of audio an atmosphere or an unfinished
-   build? Not answerable from this document.
-3. **Decide whether the forced Yes is legible.** A player may read it as a bug
-   rather than as the argument. Needs one playtest with someone who has not read
-   this document.
-4. **Name the game.** *Observatory Log* is a working title; *THE AUDIENCE* is the
-   alternative, and the ending currently prints the latter.
-5. **Wire the day-title font atlases** so the seven days look like seven days.
+## 五、设计变更记录（读与想如何改变了设计）
+
+课程要求"整合要改变设计，而不只是在文件末尾附一段笔记"。这里记录三处**确实改变了
+设计**的地方，以及对应日志条目。
+
+| 来源 | 原来的设计 | 改变后的设计 | 日志 |
+| --- | --- | --- | --- |
+| Daston（摘要） | 星图只是"记录界面" | 星图是**唯一的观测装置**：异常只以星图上的差异存在，天空不再渲染它 | 11-03「星图是异常唯一存在的地方」 |
+| 自己的检索反思 | 把表单描述为"玩家的选择" | 表单改述为**有偏好的仪器**（设计文档 §2.2 重写），并在第六天实现"保留被拒文本" | 11-04「游戏到底在论证什么」 |
+| 检索失败 | 打算用"paperwork"文献支撑表单 | 改用**按书名检索**定位 Gitelman；书目中保留失败查询与其无关结果 | 11-04「检索没有找到我预期的东西」 |
+
+---
+
+## 六、未决问题与下一步
+
+1. **真正读完 Gitelman 与 Fisher。** 两者目前都是线索。展示前至少要从各篇找到一段
+   带精确定位的原文，否则必须在台上明确说明它们只是预期。
+2. **测试沉默。** 没有音频是气氛，还是没做完？这无法从设计文档回答。
+3. **判断"强制 Yes"是否可读。** 玩家可能把它读成 bug 而不是论点。需要一次未读过本文
+   的玩测。
+4. **游戏名称未定。** *Observatory Log* 是工作标题；*THE AUDIENCE* 是备选，目前结局
+   画面印的是后者。
+5. **接入逐日字体图集**，让七天看起来真的像七天。

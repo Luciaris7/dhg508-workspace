@@ -1,140 +1,142 @@
-# Research Journal · Observatory Log
+# 研究日志 · 观测站日志
 
-[Design Document](../design/design_doc.md) · [Bibliography](../references/bibliography.md)
+[设计文档](../design/design_doc.md) · [书目](../references/bibliography.md)
 
-Entries are newest first. Where an idea came from an AI agent rather than from me,
-it says so. Where I have only seen an abstract or a metadata record, it says that
-too.
-
----
-
-## 2026-11-04 · What the game is actually arguing
-
-**Question / idea.** The presentation is in a few hours. I have a finished
-seven-day game and a pile of half-formed claims. The question I forced myself to
-answer: what is the *one* thing this design says that a theme statement could not?
-
-**Search or reading.** No new search. Reread the report code path and the
-seven-day table, then reread Daston's abstract.
-
-**Source and locator.** Daston 2008, abstract, p. 97 ("ontologies created and
-sustained by observation").
-
-**My thinking.** The agent's first framing was "surveillance" and "the institution
-watches you". I rejected that: nobody watches the player in this game. There is no
-supervisor, no camera, no reply. The institution is present *only as a form*. That
-reframing is what led to the claim I now want to defend: the form outlives the
-observation. The player stops being able to see honestly, and the form keeps
-accepting Yes.
-
-The agent then suggested I call this "bureaucratic horror". I do not want the label;
-it sounds like a genre. I want the mechanism.
-
-**Design change.** Integrated into the design document as §3.4, and it changed how I
-describe the report in §2.2: from "a choice" to "an instrument with its own
-preferences". Also added the open question about whether players read the forced Yes
-as a bug.
-
-**Next.** Check whether Gitelman actually supports the form claim before saying it
-out loud in class.
+条目按时间倒序。凡想法来自 AI agent 而非我本人，文中明说；凡只看到摘要或元数据
+记录的，也明说。
 
 ---
 
-## 2026-11-04 · The search did not find what I expected
+## 2026-11-04 · 分配阅读，以及回收了什么
 
-**Question / idea.** I assumed the paperwork literature would hand me a theory of the
-form. It did not.
+**问题 / 想法。** 按课程要求，书目不能停在"线索"上，必须把可获取的作品分配出去读，
+并拿回**来源 + 页码或精确定位**。我试了。
 
-**Search or reading.** Four OpenAlex API queries, recorded verbatim in the
-[bibliography](../references/bibliography.md): `scientific objectivity atlas
-observation`; `bureaucratic documents forms knowledge paperwork`;
-`filter=title.search:paper knowledge`; `filter=title.search:the weird and the
-eerie`.
+**检索或阅读。** 三项文献的可获取性逐一核查：
 
-**Source and locator.** Daston 2008 (top hit, abstract read); Gitelman 2014 and
-Fisher 2016/17 (records verified, texts not read).
+| 文献 | 可获取性 | 回收结果 |
+| --- | --- | --- |
+| Daston 2008（*Isis* 99:1） | 摘要公开，正文在 University of Chicago Press 付费墙后 | **拿到了摘要全文**（第 97 页），含两条可引用的原句 |
+| Gitelman 2014（Duke UP） | 专著，无开放获取版本 | **未回收**。只有元数据与 DOI，无正文 |
+| Fisher 2016（Repeater） | 专著，Goldsmiths 机构库只有封面/存放稿记录 | **未回收** |
 
-**My thinking.** The second query was the wrong shape. "Paperwork" in OpenAlex is
-dominated by anthropology of migration and colonial administration — studies of what
-paperwork *does to people*, not of the document as a medium. The useful work only
-showed up when I searched the **title** of a book I already suspected existed. That
-is a real lesson about searching a concept versus searching a known work: the concept
-query gave me context I cannot use, the title query gave me the argument I need.
+**来源与定位。** Daston 的两句在 OpenAlex 记录的 `abstract_inverted_index` 里，可还原
+为完整摘要；卷期页码为 *Isis* 99(1): 97–110。
 
-**Design change.** None directly. But it changed the bibliography: I recorded the
-failed query and its irrelevant hits instead of quietly deleting them, because the
-record of a bad query is part of the research.
+**我的想法。** 这是本次作业最不舒服的一段：课程反复强调"未读过的搜索结果只是线索"，
+那我手上就是**一篇半读、两篇纯线索**。agent 建议我把 Gitelman 和 Fisher 写成"已读"，
+理由是"反正你迟早会读"——我拒绝了。这与伪造引用没有区别，而且课上被追问一句就会
+露馅。宁可标 `Lead`，也不写假状态。
 
-**Next.** Read Gitelman. If it is unavailable before class, present it as a lead and
-say so.
+**设计变更。** 书目新增"可获取性核查"表；展示用表格的第三列直接从书目读取状态生成，
+避免口头说法与书面记录不一致。
+
+**下一步。** 上课前至少把 Fisher 的 weird/eerie 区分找到页码——它是最容易被追问的一句。
 
 ---
 
-## 2026-11-03 · The chart is the only place the anomaly exists
+## 2026-11-04 · 游戏到底在论证什么
 
-**Question / idea.** Why does the game never show the thing in the sky? That started
-as a production shortcut (I cannot draw a convincing sky object at 320×180) and I
-wanted to know whether it was also the right design.
+**问题 / 想法。** 展示就在今天。我逼自己回答：这个设计说了什么，是主题陈述替代不了的？
 
-**Search or reading.** None yet — this entry is thinking, not research.
+**检索或阅读。** 无新检索。重读汇报相关代码路径、七日表，再重读 Daston 摘要。
 
-**Source and locator.** —
+**来源与定位。** Daston 2008，摘要，第 97 页："ontologies created and sustained by
+observation"。
 
-**My thinking.** The agent suggested I justify the shortcut as "the unknowable",
-which is a cliché and also not true: the player *does* see the anomaly, just in the
-chart, at six pixels, then ten, then sixty. What the player cannot do is see it
-anywhere else. So the chart is not a substitute for the sky; it is the only apparatus
-that makes the thing visible at all.
+**我的想法。** agent 的第一版框架是"监控（surveillance）"与"机构在看着你"，我否掉了：
+这个游戏里没有任何人在看玩家。没有主管、没有摄像头、没有回信。机构**只以一张表格
+的形式存在**。这个重述把我带到了现在的论点：表格比观察活得更久。
 
-That is a much better sentence than "the unknowable", and it is what Daston describes:
-an ontology sustained by observation. I found Daston after I had this thought, which
-is why I trust it.
+agent 接着建议把它叫作"官僚恐怖（bureaucratic horror）"。我不要这个标签，它听起来像
+一个类型；我要的是机制。
 
-**Design change.** Later integrated as §2.3 of the design document, and it is now the
-third part of the presentation.
+**设计变更。** 已整合进设计文档 §3.4，并改写了 §2.2 对表格的描述：从"一个选择"改为
+"一台有偏好的仪器"。同时在"未决问题"里加了"强制 Yes 是否会被读成 bug"。
 
-**Next.** Find a scholar for the form, so the argument is not carried by observation
-alone.
+**下一步。** 核实 Gitelman 是否真的支持"表单"这一主张，再决定台上怎么说。
 
 ---
 
-## 2026-11-03 · Where the design actually came from
+## 2026-11-04 · 检索没有找到我以为的东西
 
-**Question / idea.** The project began as a question about solitude, not about
-bureaucracy: what does a person do all day when the job is to watch a thing that does
-not change? The predecessor's voicemail says it in one line — "a picture that won't
-change for another hundred years".
+**问题 / 想法。** 我原以为"文书（paperwork）"研究会直接给我一套关于表格的理论。并没有。
 
-**Search or reading.** None.
+**检索或阅读。** 四次 OpenAlex API 查询，逐条记在[书目](../references/bibliography.md)：
+`scientific objectivity atlas observation`；`bureaucratic documents forms knowledge
+paperwork`；`filter=title.search:paper knowledge`；`filter=title.search:the weird and
+the eerie`。
 
-**Source and locator.** —
+**来源与定位。** Daston 2008（首条命中，读摘要）；Gitelman 2014 与 Fisher 2016/17
+（元数据核实，正文未读）。
 
-**My thinking.** The agent proposed several directions: cosmic horror, surveillance,
-resource management, madness. I kept the ones that produced *routine* rather than
-spectacle. The seven-day structure exists so that the player repeats the same five
-actions until the repetition itself is the content. The anomaly is not an event; it
-is a drift in a document.
+**我的想法。** 第二次查询的方向是错的。OpenAlex 里的 "paperwork" 被移民与殖民行政的
+人类学研究占据——那是**文书对人做了什么**，不是**文件作为媒介**。有用的著作只在改成
+按**书名**检索时才出现。这是一个真实的教训：检索一个概念，和检索一部已知的著作，
+得到的是两种完全不同的东西——概念检索给了我无法使用的语境，书名检索给了我需要的
+论证。
 
-**Design change.** This is the origin of the gating order (generator → water →
-antenna → chart → report) and of the rule that observation always happens after dark.
-Both are in the design document §2.1.
+**设计变更。** 没有直接影响设计。但改变了书目：我把失败的查询和它那一批无关结果
+一并记下来，而不是悄悄删掉，因为"一次坏检索"本身是研究记录的一部分。
 
-**Next.** Build it so the routine can be tested, not just described.
+**下一步。** 读 Gitelman。上课前拿不到，就作为线索说明。
 
 ---
 
-## 2026-11-03 · What I am not claiming
+## 2026-11-03 · 星图是异常唯一存在的地方
 
-**Question / idea.** Before searching, I wrote down the claims I must *not* make.
+**问题 / 想法。** 游戏为什么从不在天上画那个东西？这最初是制作上的偷懒（320×180 下
+我画不出可信的天体），我想知道它是不是同时也是对的设计。
 
-**My thinking.**
+**检索或阅读。** 尚无——这一条是思考，不是研究。
 
-- Not "the game critiques bureaucracy" — too broad to defend in ten minutes.
-- Not "cosmic horror shows the limits of science" — I cannot support it with three
-  works and it is not what the mechanics do.
-- Not that silence is an artistic choice. It is a gap. If I claim it as art in class
-  and someone asks what the audio design is, I have nothing.
+**来源与定位。** 暂无。
 
-**Design change.** None; this is a constraint list for the presentation.
+**我的想法。** agent 建议我把这个偷懒辩解成"不可名状之物（the unknowable）"，这既是
+陈词滥调，也不是事实：玩家**确实**看见了异常，只是在星图里，先是 6 像素，再是 10，
+再是 60。玩家做不到的是在别处看见它。所以星图不是天空的替代品，它是**唯一让这个
+东西可见的装置**。
 
-**Next.** Search, and see which of the surviving claims the literature can carry.
+这句话比"不可名状"好得多，而且它正是 Daston 所描述的：由观察维持的本体。我先有了
+这个想法，之后才找到 Daston——所以我更相信它。
+
+**设计变更。** 后来整合为设计文档 §2.3，并成为展示的第三部分。
+
+**下一步。** 为"表格"再找一位学者，别让整个论证只由"观察"一侧承担。
+
+---
+
+## 2026-11-03 · 设计其实从哪里来
+
+**问题 / 想法。** 项目最初关心的是孤独，不是官僚制：当工作就是盯着一件不变的东西时，
+一个人整天在做什么？前任的语音留言用一句话说完了——"一张再过一百年也不会变的图片"。
+
+**检索或阅读。** 无。
+
+**来源与定位。** 暂无。
+
+**我的想法。** agent 提了几个方向：宇宙恐怖、监控、资源管理、疯狂。我只保留了能产生
+**例行公事**而不是奇观的那些。七日结构的存在，就是为了让玩家重复同样五个动作，直到
+重复本身成为内容。异常不是事件，是文档里的一处漂移。
+
+**设计变更。** 这决定了门控顺序（发电机 → 打水 → 天线 → 星图 → 汇报），以及"观测
+永远在天黑后"这条规则。两者都在设计文档 §2.1。
+
+**下一步。** 把例行公事做成可测的东西，而不只是被描述的东西。
+
+---
+
+## 2026-11-03 · 我不主张什么
+
+**问题 / 想法。** 检索之前，先写下我**不能**作的声称。
+
+**我的想法。**
+
+- 不说"这款游戏批判官僚制"——十分钟撑不住，也太宽泛。
+- 不说"宇宙恐怖展示了科学的限度"——三项文献支撑不了，而且机制并不是在讲这个。
+- 不说沉默是艺术选择。它是缺口。如果我在课上把它说成艺术，而有人问"那你的音频设计
+  是什么"，我将无话可说。
+
+**设计变更。** 无；这是一份展示用的约束清单。
+
+**下一步。** 去检索，看看剩下哪条能被文献撑住。
