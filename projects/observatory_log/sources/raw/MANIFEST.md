@@ -19,3 +19,22 @@
 ## 版权
 
 两篇均为开放获取（OpenAlex `oa_status: green`），下载用于课程阅读与研究记录。
+---
+
+## 参考截图（游戏画面）
+
+七款游戏的截图取自各自 Steam 商店页面（`storesearch` + `appdetails` 公开 API 取首图或指定图），
+存放在 `reslides/examples/starter/public/obs/ref/`，仅用于课堂评论与批判性讨论。
+
+| 文件 | 游戏 | Steam appid |
+| --- | --- | --- |
+| `ironlung.jpg` | Iron Lung (2022) | 1846170 |
+| `ihavenomouth.jpg` | I Have No Mouth, and I Must Scream (1995) | 245390 |
+| `fearstofathom.jpg` | Fears to Fathom - Scratch Creek | 4121170 |
+| `firewatch.jpg` | Firewatch (2016) | 383870 |
+| `chillasart.jpg` | [Chilla's Art] Parasocial | 2314720 |
+| `sallyface.jpg` | Sally Face - Episode One（GEAR BOY 画面） | 541570 |
+| `sallyface_gear.jpg` | 同上（SUPER GEAR BOY 正在游玩） | 541570 |
+| `silenthill.jpg` | SILENT HILL 2 (2024 remake) | 2124490 |
+
+**注意**：Silent Hill 用的是 2024 年重制版的截图，不是 1999 年原版；幻灯片上已注明是系列参照。

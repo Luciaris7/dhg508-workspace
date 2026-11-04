@@ -19,7 +19,7 @@ timer: countdown
 单人 · 2D 横版 · 像素 · 七日 · 一个结局
 
 <!--
-0:00–0:40 · 40 秒
+0:00–0:30 · 30 秒
 
 先纠正一件事，也是我这次重做的原因：
 
@@ -49,7 +49,7 @@ kicker: 来源
 三篇学术文献不解释"灵感从哪来"，它们解释**这些手法为什么有效**。
 
 <!--
-0:40–1:30 · 50 秒
+0:30–1:15 · 45 秒
 
 这一页是整场展示的地基。
 
@@ -57,6 +57,35 @@ kicker: 来源
 第一，这不是"我喜欢这些游戏"，每一款都对应一个具体机制，右边那列就是对应关系。
 第二，文献的位置变了。文献不是我的灵感来源，它们是我用来解释这些手法为什么有效的工具。
 所以下面每一页我会先讲游戏，再讲我怎么改，最后才提文献。
+-->
+
+---
+kicker: 来源截图
+---
+
+# 七款游戏的画面。
+
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px;">
+<div><img src="/obs/ref/ironlung.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">IRON LUNG · 低信息</div></div>
+<div><img src="/obs/ref/ihavenomouth.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">I HAVE NO MOUTH · 不可逃脱</div></div>
+<div><img src="/obs/ref/fearstofathom.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FEARS TO FATHOM · 日常的异常</div></div>
+<div><img src="/obs/ref/firewatch.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FIREWATCH · 孤独</div></div>
+<div><img src="/obs/ref/chillasart.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">CHILLA'S ART · 低画质</div></div>
+<div><img src="/obs/ref/sallyface.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SALLY FACE · 屏中屏（GEAR BOY）</div></div>
+<div><img src="/obs/ref/silenthill.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SILENT HILL 2 · 内在的恐怖</div></div>
+<div style="display:flex; align-items:center; padding-left:8px;"><p style="margin:0;"><b>Iron Lung 的潜艇相机</b>直接变成了我的星图；<b>Sally Face 那张脸</b>说明了低画质为什么会让人不适。</p></div>
+</div>
+
+::foot::
+
+截图取自各作的 Steam 商店页面，仅用于课堂评论。
+
+<!--
+1:15–1:25 · 10 秒，快速扫过
+
+不要逐张讲。指两张就够了：
+左边第一张，Iron Lung 的潜艇相机——模糊、只有一张、看不清。这就是我的星图。
+下面 Sally Face 那张脸——低画质 + 不对称，让人不适。这就是 Chilla's Art 那条。
 -->
 
 ---
@@ -71,12 +100,12 @@ kicker: 机制一 · 低信息
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>铁肺</b>：你在一艘铁皮潜艇里，看不见外面，只能靠一台老相机拍照，然后看那张模糊的照片判断外面有什么。</p></div>
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>恐惧来自<b>信息不足</b>，而不是来自看见怪物。你永远只能拿到一点点证据，剩下全靠自己想。</p></div>
 <div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>我把"拍照"换成了<b>星图</b>：异常从不画在天空里，只作为星图上的一个圆存在，第 3 天 6 px，第 7 天 160 px。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Costikyan</b>：游戏之所以有意思，是因为它制造并管理<b>不确定性</b>。<i>（线索）</i></p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Kjeldgaard-Christiansen &amp; Clasen</b>（2019，预印本第 4 页）：我们怕黑，是因为黑暗<b>限制了我们获取环境的信息</b>。</p></div>
 </div>
 </div>
 
 <!--
-1:30–2:30 · 60 秒
+1:25–2:20 · 55 秒
 
 铁肺是影响最大的一款。
 
@@ -86,7 +115,9 @@ kicker: 机制一 · 低信息
 我把它直接换成了星图：天空永远只画星星和月亮，异常只存在于你自己画的星图上。
 你每天拿到的是"它变大了"这个事实，但你永远不知道它是什么。
 
-文献上，Costikyan 的不确定性理论正好解释这件事：
+文献上，Kjeldgaard-Christiansen 和 Clasen 给了这条一个演化心理学的解释：
+我们怕黑，是因为黑暗「限制了我们获取环境的信息」。也就是说，信息受限本身就是威胁信号——
+我不是随便藏东西，我是踩在一个真实的恐惧机制上。这篇我读了全文，预印本第 4 页。
 游戏的张力来自被管理的不确定性，而不是来自画面。
 这本书我还没读到正文，是线索，我明说。
 -->
@@ -103,12 +134,12 @@ kicker: 机制二 · 不可逃脱
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>无声狂啸</b>：一个全能的 AI 把人类最后的几个人留下来，永远折磨。它不给出口，也不给死。</p></div>
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>恐怖不是"我会不会死"，而是<b>"我知道不会结束"</b>。玩家的努力从一开始就是无效的。</p></div>
 <div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>七天循环本身就是那个牢笼。第六天起表格<b>拒绝 Yes 以外的答案</b>；第七天床失效，玩家被押着走向湖边。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Stobbart</b>：恐怖游戏把"玩家能动性"本身当作可被剥夺的东西。<i>（线索）</i></p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Kjeldgaard-Christiansen &amp; Clasen</b>（2019，预印本第 11 页）：恐怖游戏提供的是<b>有安全边界的威胁模拟</b>——你知道自己不会真的死，所以你才有余裕去害怕。</p></div>
 </div>
 </div>
 
 <!--
-2:30–3:30 · 60 秒
+2:20–3:15 · 55 秒
 
 无声狂啸给我的是一句话：你逃不掉。
 
@@ -137,7 +168,7 @@ kicker: 机制三 · 日常的异常
 </div>
 
 <!--
-3:30–4:30 · 60 秒
+3:15–4:10 · 55 秒
 
 Fears to Fathom 和 Chilla's Art 教我的同一件事：恐怖不用发生在鬼屋。
 
@@ -167,7 +198,7 @@ kicker: 机制四 · 孤独
 </div>
 
 <!--
-4:30–5:30 · 60 秒
+4:10–5:00 · 50 秒
 
 看火人和我的结构几乎同源：一个人守一座塔，整局只有一个声音从机器里出来。
 
@@ -185,17 +216,24 @@ kicker: 机制五 · 低画质与屏中屏
 # 粗糙的画面本身，和屏幕里的屏幕。
 
 <div class="body col">
-<img src="/obs/gift.png" alt="桌面里的小游戏" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<div style="display: flex; gap: 26px; justify-content: center; align-items: flex-end;">
+<div style="text-align: center;"><img src="/obs/ref/sallyface_gear.jpg" alt="Sally Face 的 Gear Boy" style="height: 162px; width: auto; border: 1px solid #444;" /><div class="label" style="margin-top: 4px;">SALLY FACE · SUPER GEAR BOY</div></div>
+<div style="text-align: center;"><img src="/obs/gift.png" alt="桌面里的小游戏" style="height: 162px; width: auto; image-rendering: pixelated; border: 1px solid #333;" /><div class="label" style="margin-top: 4px;">观测站日志 · THE GIFT OF X</div></div>
+</div>
 <div class="rows">
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>Chilla's Art</b>：低多边形、低分辨率、VHS 质感——<b>画质本身就是恐怖的一部分</b>。<b>Sally Face</b>：角色在游戏里掏出一台 GameBoy，真的能玩。</p></div>
 <div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>低画质让细节消失，玩家必须自己填补——和机制一同一原理。屏中屏则让恐怖发生在<b>最日常的界面上</b>。</p></div>
 <div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>320×180 固定分辨率。桌面是仿 XP 的，第二天凭空多出一个<b>沾血羊头骨的图标</b>，点开真的能玩。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 我的取舍</span><p>Chilla's Art 的粗糙是"做旧"，我的粗糙是<b>像素尺度的限制</b>——320×180 下每个元素都必须落在网格上。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 我的取舍</span><p>Chilla's Art 的粗糙是"做旧"，我的粗糙是<b>像素尺度的硬限制</b>——320×180 下每个元素都必须落在网格上。</p></div>
 </div>
 </div>
 
+::foot::
+
+<b>Tinwell, Grimshaw &amp; Williams</b>（2010，接受稿第 1 页）：动作与声音的不协调会放大诡异感，**最不同步的角色被认为最可怕**。
+
 <!--
-5:30–6:30 · 60 秒
+5:00–5:55 · 55 秒
 
 Chilla's Art 教我一件事：画质本身可以是恐怖的一部分。
 低多边形、低分辨率、VHS 噪点，让细节消失，玩家只能自己想象。
@@ -225,7 +263,7 @@ kicker: 机制六 · 内在的恐怖
 </div>
 
 <!--
-6:30–7:20 · 50 秒
+5:55–6:45 · 50 秒
 
 寂静岭给的是心理恐怖：怪物长在角色的罪与恐惧上。看的不是怪物，是这个人。
 
@@ -245,26 +283,32 @@ kicker: 学术对话
 
 # 三篇游戏研究，各解释一个"为什么有效"。
 
-| 文献 | 它的论点 | 解释我的哪条机制 | 阅读状态 |
+| 文献 | 它的论点 | 解释哪条机制 | 阅读状态 |
 |---|---|---|---|
-| **Kirkland**,〈Gothic Videogames, Survival Horror, and the *Silent Hill* Series〉, *Gothic Studies* 14:2 (2012), 106–122 | 哥特传统（过去侵入现在、碎裂叙事、另一个世界）在生存恐怖游戏里被改写成可玩的形式 | ③ 日常的异常 · ⑥ 内在的恐怖 | **已读摘要**（第 106 页），正文付费墙 |
-| **Costikyan**, *Uncertainty in Games*, MIT Press (2013) | 游戏的趣味来自由规则管理的不确定性 | ① 低信息 | **线索**，正文未读 |
-| **Stobbart**, *Videogames and Horror*, Univ. of Wales Press (2019) | 恐怖游戏把玩家的能动性、身体与视角当作可被剥夺的对象 | ② 不可逃脱 | **线索**，正文未读 |
+| **Kjeldgaard-Christiansen & Clasen**,〈Threat Simulation in Virtual Limbo〉, *Journal of Gaming and Virtual Worlds* 11:2 (2019) | 恐怖游戏是**有安全边界的威胁模拟**；我们怕黑，因为黑暗限制了我们获取信息 | ① 低信息 · ② 不可逃脱 | **已读全文**（预印本；摘要、第 4 页、第 11 页） |
+| **Tinwell, Grimshaw & Williams**,〈Uncanny Behaviour in Survival Horror Games〉, *JGVW* 2:1 (2010), 3–25 | 动作与声音的不协调会放大诡异感；最不同步的角色被认为最可怕 | ⑤ 低画质恐怖谷 | **已读全文**（接受稿；摘要第 1 页） |
+| **Kirkland**,〈Gothic Videogames, Survival Horror, and the *Silent Hill* Series〉, *Gothic Studies* 14:2 (2012), 106–122 | 哥特传统——异世界侵入、碎裂叙事、过去侵入现在——在生存恐怖游戏里被改写成可玩的形式 | ③ 日常的异常 · ⑥ 内在的恐怖 | **已读摘要**（第 106 页）；正文付费墙 |
 
 ::foot::
 
-它们不解释灵感来源——灵感来源是上面那七款游戏。它们解释这些手法为什么有效。
+前两篇是开放获取，我读的是作者存放的预印本／接受稿；页码指该版本的页码。它们不解释灵感来源——灵感来源是上面那七款游戏。
 
 <!--
-7:20–8:10 · 50 秒
+6:45–7:45 · 60 秒
 
-三篇的位置要说清楚：它们不是我的灵感来源，是我用来解释为什么有效的工具。
+三篇的位置要说清楚：不是灵感来源，是用来解释"为什么有效"的工具。
 
-Kirkland 解释寂静岭和哥特传统——我读了摘要，第 106 页，正文在付费墙后，可以引摘要。
-Costikyan 解释低信息——不确定性是游戏张力的来源。这本书我没读到正文，是线索。
-Stobbart 解释能动性被剥夺——正是无声狂啸给我的那条。也是线索。
+第一篇（Kjeldgaard-Christiansen 和 Clasen）解释两条：
+我们对黑暗的恐惧是因为它限制了信息——这正好是我机制一的理论根据；
+恐怖游戏之所以有人玩，是因为它是有安全边界的威胁模拟——你安全，所以你敢怕。
 
-我明说：三篇里只有一篇读了摘要，两篇是线索。
+第二篇（Tinwell 等）解释机制五：他们做实验让人评价虚拟角色，
+发现动作和声音越不协调，角色越诡异、越可怕。这解释了我为什么用 320×180：
+低分辨率下动作和声音本来就不同步，诡异是被放大出来的。
+
+第三篇（Kirkland）解释机制三和六：哥特传统怎么被改写成可玩的形式。
+
+诚实说明：前两篇我读的是预印本和接受稿，Kirkland 只读了摘要。
 -->
 
 ---
@@ -279,7 +323,7 @@ kicker: 我的贡献
 </div>
 
 <!--
-8:10–8:50 · 40 秒
+7:45–8:25 · 40 秒
 
 如果只讲一句贡献，就是这一句。
 
@@ -307,7 +351,7 @@ kicker: 技术栈
 | **缺失：音频** | — | — | 全程无声；是缺口，不是选择 |
 
 <!--
-8:50–9:30 · 40 秒
+8:25–9:10 · 45 秒
 
 用自己的话讲。
 
@@ -327,7 +371,7 @@ kicker: 收尾
 # 恐怖不需要怪物，它需要一个你每天都要做的动作。
 
 <div class="body col">
-<div class="frame"><span class="label">我还欠这次拆解的两件事</span><div class="text">① 读完 Costikyan 与 Stobbart，各找到一段带页码的原文。<br />② 验证沉默：是气氛还是没做完——这决定机制四成不成立。</div></div>
+<div class="frame"><span class="label">我还欠这次拆解的两件事</span><div class="text">① Kirkland 只读到摘要——正文在付费墙后，机构库也没有存放稿。<br />② 验证沉默：是气氛还是没做完——这决定机制四成不成立。</div></div>
 </div>
 
 ::foot::
@@ -335,7 +379,7 @@ kicker: 收尾
 谢谢，欢迎提问。
 
 <!--
-9:30–10:00 · 30 秒
+9:10–9:40 · 30 秒
 
 用这句话收尾：恐怖不需要怪物，它需要一个你每天都要做的动作。
 
