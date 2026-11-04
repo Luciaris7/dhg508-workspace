@@ -1,114 +1,93 @@
 # 书目与检索记录 · 观测站日志
 
-纯 Markdown，不使用文献管理软件。每条都记录：**怎么找到的**、**实际读了什么**、
-**哪些还只是线索**。未读过的搜索结果只是线索；只有读过的段落才是发现。
+本项目的来源分两类，必须分开记：
+
+- **文化来源 = 七款游戏。** 灵感来自玩过的游戏，不是文献。它们是我的**一手参照**。
+- **分析工具 = 三篇游戏研究。** 它们不解释灵感从哪来，只解释这些手法**为什么有效**。
+
+未读过的搜索结果只是线索；只有读过的段落才是发现。
 
 检索途径：**OpenAlex works API**（`https://api.openalex.org/works`），按课程
 [scholarly-search 技能](../../../../.opencode/skills/scholarly-search/SKILL.md)的要求执行。
-本项目的第三篇（洛夫克拉夫特）是**公有领域全文**，直接读取，不是检索结果。
 
 ---
 
-## 一、三项文献的分工
+## 一、七款游戏（文化来源，一手参照）
 
-拆解恐怖需要三种不同的东西，各由一篇承担：
+| 游戏 | 年份 | 开发者 / 平台 | 它给了《观测站日志》什么 | 落在哪个机制 |
+| --- | --- | --- | --- | --- |
+| **Iron Lung 铁肺** | 2022 | David Szymanski · PC | 低信息获取 + 克苏鲁式恐惧。**直接移植**：拍照 → 星图记录 | ① 低信息 |
+| **I Have No Mouth, and I Must Scream 无声狂啸** | 1995 | Cyberdreams · PC（原著 Harlan Ellison） | 无法逃脱的注定：结局已写好，努力从一开始无效 | ② 不可逃脱 |
+| **Fears to Fathom 溯源之惧** | 2021–2023 | Rayll · PC | 日常生活里的异常感：普通的一晚，然后有件事开始不对 | ③ 日常的异常 |
+| **Firewatch 看火人** | 2016 | Campo Santo · PC | 孤独感与隔离感：独守瞭望塔，人声只从无线电里来 | ④ 孤独 |
+| **Chilla's Art 系列** | 2018– | Chilla's Art · PC | 低画质带来的恐怖谷效应 + 日常恐怖（便利店、公寓、夜班） | ⑤ 低画质 |
+| **Sally Face** | 2016–2019 | Portable Moose · PC | 屏中屏：角色掏出一台 GameBoy，真的能玩。**直接移植**：我的桌面小游戏 | ⑤ 界面内的小游戏 |
+| **Silent Hill 寂静岭系列** | 1999– | Konami · 多平台 | 心理恐怖：怪物长在角色的罪与恐惧上，被审视的是角色 | ⑥ 内在的恐怖 |
 
-| 需要什么 | 用哪篇 | 作用 |
-| --- | --- | --- |
-| **文化来源**：这套恐怖从哪个传统来 | 洛夫克拉夫特（1927） | 宇宙恐怖的宣言：恐惧来自未知，气氛重于情节 |
-| **机制分析**：恐怖作为类型如何运作 | Carroll（1990） | 艺术恐怖（art-horror）与"不纯"的怪物：类型越界 |
-| **当代范畴**：缺席为什么会吓人 | Fisher（2016） | weird 与 eerie 的区分 |
+**两处直接移植**（不是"受到影响"，是照着做的）：
+
+1. **铁肺的拍照 → 我的星图。** 铁肺用一台老相机拍下外部、只能看模糊照片；我的玩家
+   每天把异常画进星图，也只能从这张图上知道它变大了。
+2. **Sally Face 的 GameBoy → 我的桌面小游戏。** 我的站内电脑里有一个能真的玩的街机游戏
+   *The Gift of X*，第二天凭空出现。
 
 ---
 
-## 二、检索记录
+## 二、三篇游戏研究（分析工具）
+
+### Kirkland, Ewan. "Gothic Videogames, Survival Horror, and the *Silent Hill* Series." *Gothic Studies* 14, no. 2 (2012): 106–122. DOI [10.7227/gs.14.2.8](https://doi.org/10.7227/gs.14.2.8). OpenAlex [W2021746490](https://openalex.org/W2021746490).
+
+**已读**：完整摘要（第 106 页）。**未读**：正文——付费墙。
+
+**摘要中的实际定位。** 论文考察哥特传统在生存恐怖游戏中的运作，并讨论寂静岭的叙事、
+美学与玩法与哥特的关系；摘要列出四个关切：**阴森异世界的侵入**、**碎裂的叙事形式**、
+**过去侵入现在的感觉**、以及**精神分析维度**（第 106 页）。
+
+**接在我的哪条机制上。** ③ 日常的异常（异世界侵入日常空间）与 ⑥ 内在的恐怖。
+
+**状态：部分阅读。** 可引摘要；不可对正文做任何论点归属。
+
+### Costikyan, Greg. *Uncertainty in Games*. Cambridge, MA: MIT Press, 2013. OpenAlex [W1585564431](https://openalex.org/W1585564431).
+
+**状态：线索。** 记录已核实（MIT Press, 2013），正文未读。
+
+**为什么列它**：我的机制一（低信息）需要一套关于"不确定性如何产生张力"的说法，这本书是
+游戏研究里最直接的一本。
+
+**展示前必须核实**：他对不确定性的分类、以及"信息不足"在其中的位置与页码。
+**核实前不引用。**
+
+### Stobbart, Dawn. *Videogames and Horror: From Amnesia to Zombies, Run!* Cardiff: University of Wales Press, 2019. DOI [10.2307/jj.14491610](https://doi.org/10.2307/jj.14491610). OpenAlex [W4396603958](https://openalex.org/W4396603958).
+
+**状态：线索。** 记录已核实（University of Wales Press, 2019），OpenAlex 无摘要，正文未读。
+
+**为什么列它**：机制二（不可逃脱）需要一套关于"玩家的能动性如何被剥夺"的说法。
+
+**展示前必须核实**：她关于能动性与恐怖关系的具体表述与页码。**核实前不引用。**
+
+---
+
+## 三、检索记录
 
 | 日期 | 查询词（原样） | 途径 | 结果 |
 | --- | --- | --- | --- |
-| 2026-11-04 | `filter=title.search:philosophy of horror` | OpenAlex API，3 条 | 只返回对 Carroll 该书的**书评**（*MLN* 1991；*Philosophical Quarterly* 1991）与 Fahy 的编著。专著本身未被索引为独立记录。 |
-| 2026-11-04 | `filter=title.search:the weird and the eerie` | OpenAlex API，2 条 | **命中** Fisher（Goldsmiths 机构库，2017）及 Woodard 书评。 |
-| 2026-11-04 | 直接读取 `hplovecraft.com/writings/texts/essays/shil.aspx` | 公有领域全文 | **已读全文**（约 2.6 万词）。见下节定位。 |
+| 2026-11-04 | `filter=title.search:uncertainty in games` | OpenAlex，2 条 | **命中** Costikyan（MIT Press, 2013）。另一条是 *Library Journal* 的书评。 |
+| 2026-11-04 | `filter=title.search:videogames and horror` | OpenAlex，2 条 | **命中** Stobbart（2019）**与** Kirkland 的寂静岭论文（*Gothic Studies* 2012）。一次查询同时拿到两篇。 |
+| 2026-11-04 | `works/W2021746490?select=...abstract_inverted_index` | OpenAlex 单条 | **读** Kirkland 摘要全文与页码（106–122）。 |
+| 2026-11-04 | `works/W4396603958?select=...abstract_inverted_index` | OpenAlex 单条 | Stobbart 无摘要字段——因此只能标为线索。 |
 
-**此前失败的查询（保留记录）**：`bureaucratic documents forms knowledge paperwork` 返回移民
-与殖民行政人类学，与"恐怖机制"无关，已弃用。这个失败促成了本次方向调整——我原来把项目
-当成"官僚客观性"来论证，而它其实是**恐怖**。
-
----
-
-## 三、读过的工作
-
-### Lovecraft, H. P. "Supernatural Horror in Literature." 1927. 全文见 [hplovecraft.com](https://www.hplovecraft.com/writings/texts/essays/shil.aspx)。
-
-**已读**：全文。**定位方式**：该文分节（I. Introduction；II. The Dawn of the Horror-Tale……），
-以下引文均出自**第一节（I. Introduction）**，按段落顺序标注。
-
-**设计文档中实际使用的段落：**
-
-- **第 1 段**：「The oldest and strongest emotion of mankind is fear, and the oldest and
-  strongest kind of fear is fear of the unknown.」
-- **第 6 段**：「A certain atmosphere of breathless and unexplainable dread of outer,
-  unknown forces must be present; and there must be a hint … of that most terrible
-  conception of the human brain—a malign and particular suspension or defeat of those
-  fixed laws of Nature which are our only safeguard against the assaults of chaos and
-  the daemons of unplumbed space.」
-- **第 7 段**：「Atmosphere is the all-important thing, for the final criterion of
-  authenticity is not the dovetailing of a plot but the creation of a given sensation.」
-- **第 7 段**：「The one test of the really weird is simply this—whether or not there be
-  excited in the reader a profound sense of dread, and of contact with unknown spheres
-  and powers; a subtle attitude of awed listening…」
-
-**相关性**：机制二（不可知）与整款游戏的"不解释"原则。
+**此前的失败方向（保留记录）**：我最初用 `scientific objectivity`、`paperwork`、
+`the weird and the eerie` 等查询，把项目论证成"官僚客观性"或"宇宙恐怖理论"。
+那些文献本身没问题，**是我对项目的判断错了**——真正的来源是游戏，不是文献。
+这一段保留在书目里，因为它解释了为什么现在的框架是"游戏为来源、文献为工具"。
 
 ---
 
-## 四、已确认存在但尚未阅读（线索）
+## 四、引用规范
 
-### Carroll, Noël. *The Philosophy of Horror, or Paradoxes of the Heart*. New York: Routledge, 1990.
-
-**状态：线索。** OpenAlex 只索引到两篇书评（W1983208800, *MLN* 1991；W3216584098,
-*Philosophical Quarterly* 1991），专著本身未作为独立记录收录。书名、作者、年份经两篇书评
-交叉确认；**正文未读**。
-
-**预期取用**：Carroll 把恐怖定义为一种由「不纯的」怪物——同时属于两个互斥范畴的存在——
-所引发的「艺术恐怖（art-horror）」。我的「血肉教堂」（建筑 + 血肉）与血星（天体 + 神性）
-正是这种范畴越界。
-
-**展示前必须核实**：这个定义的具体表述与页码。**核实前不要引用。**
-
-### Fisher, Mark. *The Weird and the Eerie*. London: Repeater, 2016. OpenAlex [W2799136475](https://openalex.org/W2799136475)（Goldsmiths 记录标 2017）。
-
-**状态：线索。** 年份存疑（Repeater 版通常引作 2016，机构库记录为 2017），引用前须核实。
-正文未读。
-
-**预期取用**：weird = 本不该存在的东西；eerie = 本该空无之处却有东西，或本该有东西之处
-却空无。我的观测站属于后者。
-
-**展示前必须核实**：区分的准确措辞与页码。
-
-### Woodard, Benjamin Graham. "The Weird and the Eerie." *Textual Practice* 31 (2017). DOI [10.1080/0950236X.2017.1358704](https://doi.org/10.1080/0950236X.2017.1358704).
-
-**状态：线索。** 对 Fisher 的书评，不是第四个立场。若原书无法取得，可作为二手概要——
-引用时必须标明其性质。
-
----
-
-## 五、文化来源（非学术文献，但构成设计的历史语境）
-
-这些不是学术论证，而是设计时明确参照的文化材料，单独列出以免与学术文献混淆：
-
-| 材料 | 对设计的作用 |
-| --- | --- |
-| 《启示录》8:10–11（苦艾星从天上坠落）、6:12（月变血） | 结局的血星与「BEHOLD HER THRONE, LAMB」的末世图像 |
-| 北极／孤岛恐怖传统：*The Thing*（1982）、*The Shining*（1980）、*The Lighthouse*（2019） | 观测站的空间设定：被隔绝的设施、一个人、外部威胁 |
-| 哥特小说传统（Walpole 以降的"闹鬼城堡"） | 观测站是当代版本的哥特城堡：一座有历史、有前任、有秘密的建筑 |
-| Analog horror／家用电脑恐怖 | XP 桌面作为恐怖发生的界面 |
-| 规则怪谈（rules-based internet horror） | 「工作须知」作为一套必须遵守、但无法完全遵守的规则 |
-
----
-
-## 六、引用规范
-
-1. 只对**已读**的段落做引用或论点归属，并给出页码／章节／段落定位。
-2. 未读的工作一律标为 **线索（Lead）**，在展示中口头说明。
-3. 不编造引文、页码或出版年。
-4. 二手转述（如书评）必须标明其为二手。
+1. 游戏作为**文化来源**引用时，给出：名称、年份、开发者、以及"它给了我什么"。
+   游戏不是学术文献，不与三篇论文混排。
+2. 学术文献只对**已读**的段落做引用或论点归属，并给出页码／章节。
+3. 未读的工作一律标为 **线索（Lead）**，展示中口头说明。
+4. 不编造引文、页码或出版年。
+5. 二手转述（如书评）必须标明其为二手。

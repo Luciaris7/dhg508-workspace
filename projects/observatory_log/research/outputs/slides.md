@@ -1,7 +1,7 @@
 ---
 framework: react
 theme: exhibit
-title: "观测站日志 — 恐怖的机制与文化来源"
+title: "观测站日志 — 恐怖的机制，与它来自哪些游戏"
 routerMode: hash
 layout: cover
 kicker: DAIHUM · 第九週 · 將你的 AI 設計放進學術討論
@@ -10,9 +10,9 @@ duration: 10min
 timer: countdown
 ---
 
-# 恐怖的机制，与它的来源
+# 恐怖的机制，与它来自哪些游戏
 
-《观测站日志》：一款七天里什么都不发生的游戏。
+七款游戏给了我六种制造恐惧的办法。
 
 ::by::
 
@@ -21,338 +21,313 @@ timer: countdown
 <!--
 0:00–0:40 · 40 秒
 
-一句话讲完。
+先纠正一件事，也是我这次重做的原因：
 
-「这游戏七天里什么都不发生。没有怪物追你，没有跳吓，没有战斗，没有任何解释。
-今天我只讲两件事：它是怎么吓人的，以及这些手法分别从哪来。」
-
-不要说「这是一款关于官僚制的游戏」——那是我上一版的方向，错了。
+我最初的灵感不是来自文献，是来自我玩过的游戏。
+所以这场展示的顺序是——先讲我从哪七款游戏里各拿了一样什么，
+再讲它们怎么变成六个机制，最后用三篇游戏研究解释这些机制为什么有效。
 -->
 
 ---
-kicker: 问题
+kicker: 来源
 ---
 
-# 没有怪物、没有事件、不作解释，恐怖靠什么成立？
+# 七款游戏，各给了一样东西。
 
-<div class="body col">
-<div class="frame hot"><span class="label">我拆出来的六个机制</span><div class="text">① 重复　② 不可知　③ 表格　④ 缺席　⑤ 界面异化　⑥ 失控<br /><br />每一个我都回答三件事：<b>怎么运作</b>、<b>为什么吓人</b>、<b>从哪来</b>。</div></div>
-</div>
+| 游戏 | 年份 | 它给了我什么 | 落在哪个机制 |
+|---|---|---|---|
+| **铁肺 Iron Lung** | 2022 | 低信息获取 + 克苏鲁式恐惧 | ① 低信息 |
+| **无声狂啸** | 1995 | 无法逃脱的注定 | ② 不可逃脱 |
+| **Fears to Fathom** | 2021–23 | 日常生活里的异常感 | ③ 日常的异常 |
+| **看火人 Firewatch** | 2016 | 孤独感与隔离感 | ④ 孤独 |
+| **Chilla's Art** | 2018– | 低画质的恐怖谷 + 日常恐怖 | ⑤ 低画质 |
+| **Sally Face** | 2016–19 | 游戏机里的游戏（屏中屏） | ⑤ 界面内的小游戏 |
+| **寂静岭 Silent Hill** | 1999– | 心理恐怖 | ⑥ 内在的恐怖 |
 
 ::foot::
 
-三项学术文献分别接在 ②④⑥ 上；①③⑤ 用文化来源说明。
+三篇学术文献不解释"灵感从哪来"，它们解释**这些手法为什么有效**。
 
 <!--
-0:40–1:05 · 25 秒
+0:40–1:30 · 50 秒
 
-先把地图给出来。六个机制不是六个点子，是一条链：
-重复让你熟悉 → 不可知让你无法确认 → 表格让你无法上报 → 缺席让你无人可说 →
-界面让恐怖发生在日常里 → 失控最后剥夺你的行动。
+这一页是整场展示的地基。
 
-来源会在每一页单独标，最后有一页汇总谱系。
+注意两件事：
+第一，这不是"我喜欢这些游戏"，每一款都对应一个具体机制，右边那列就是对应关系。
+第二，文献的位置变了。文献不是我的灵感来源，它们是我用来解释这些手法为什么有效的工具。
+所以下面每一页我会先讲游戏，再讲我怎么改，最后才提文献。
 -->
 
 ---
-kicker: 机制一 · 重复
+kicker: 机制一 · 低信息
 ---
 
-# 恐怖需要一把尺子。
+# 你只能通过一台很差的仪器看世界。
 
 <div class="body col">
-<img src="/obs/antenna.png" alt="调整天线" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/starchart.png" alt="星图" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>七天走同一套五步：加油 → 打水 → 调天线 → 记录星图 → 填表。强制顺序，<b>没有失败状态</b>。加油是长按，打水是单次按键，调天线是 ±3 度的旋转。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>玩家必须先背下节奏，异常才有地方长出来。真正不安的不是第七天的血星，而是第三天那 6 个像素——因为它出现在一个你已经熟悉的画面里。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>日常恐怖（domestic horror）：把熟悉的东西变得不对劲。光照被写死，让节奏可记忆。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>例行工作<b>不做成可失败的</b>。玩家打不过这一天，只能过完它。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>铁肺</b>：你在一艘铁皮潜艇里，看不见外面，只能靠一台老相机拍照，然后看那张模糊的照片判断外面有什么。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>恐惧来自<b>信息不足</b>，而不是来自看见怪物。你永远只能拿到一点点证据，剩下全靠自己想。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>我把"拍照"换成了<b>星图</b>：异常从不画在天空里，只作为星图上的一个圆存在，第 3 天 6 px，第 7 天 160 px。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Costikyan</b>：游戏之所以有意思，是因为它制造并管理<b>不确定性</b>。<i>（线索）</i></p></div>
 </div>
 </div>
 
 <!--
-1:05–2:00 · 55 秒
+1:30–2:30 · 60 秒
 
-游戏里七天做同样五件事。没有失败状态，这是刻意的：恐怖需要稳定的背景，异常才有对比。
+铁肺是影响最大的一款。
 
-如果你第一次玩就被扔进血星下面，那是奇观，不是恐怖。
-只有当你背下了这五步、知道每天天会黑、知道床在哪，第三天星图上多出来的六个像素才扎人。
+它的做法是：你在潜艇里，什么都看不见。外面有没有东西，你只能靠拍照。
+照片模糊、只有一张、拍完还要等。你拿到的是极少量、极不可靠的信息。
 
-文化来源：日常恐怖——把熟悉的东西变陌生。所以我把光照写死，让节奏稳定可记。
+我把它直接换成了星图：天空永远只画星星和月亮，异常只存在于你自己画的星图上。
+你每天拿到的是"它变大了"这个事实，但你永远不知道它是什么。
+
+文献上，Costikyan 的不确定性理论正好解释这件事：
+游戏的张力来自被管理的不确定性，而不是来自画面。
+这本书我还没读到正文，是线索，我明说。
 -->
 
 ---
-kicker: 机制二 · 不可知
+kicker: 机制二 · 不可逃脱
 ---
 
-# 你看见了，但你不知道自己在看什么。
+# 结局已经写好了，你只是不知道什么时候。
 
 <div class="body col">
-<img src="/obs/starchart.png" alt="星图" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/redline.png" alt="第七天红字" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>异常<b>从不出现在天空里</b>。它只是星图上的一个参数：第 3 天 6 px，第 4 天 10，第 5 天 28，第 6 天 60，第 7 天 160。没有一句解释，结局也不解释。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>解释会终结恐惧。一旦玩家知道「那是什么」，它就从未知降级成怪物——而怪物是可以被理解、被对抗的。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者</span><p><b>Lovecraft</b>（1927，第一节）：最古老最强烈的恐惧是对未知的恐惧；真正的恐怖故事以<b>气氛</b>而非情节为判准。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>天空永远只画星星和月亮。异常只以「角度／距离／直径」三个数字存在。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>无声狂啸</b>：一个全能的 AI 把人类最后的几个人留下来，永远折磨。它不给出口，也不给死。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>恐怖不是"我会不会死"，而是<b>"我知道不会结束"</b>。玩家的努力从一开始就是无效的。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>七天循环本身就是那个牢笼。第六天起表格<b>拒绝 Yes 以外的答案</b>；第七天床失效，玩家被押着走向湖边。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Stobbart</b>：恐怖游戏把"玩家能动性"本身当作可被剥夺的东西。<i>（线索）</i></p></div>
 </div>
 </div>
-
-::foot::
-
-H. P. Lovecraft, "Supernatural Horror in Literature" (1927), 第一节，第 1 段与第 7 段。全文已读。
 
 <!--
-2:00–2:55 · 55 秒
+2:30–3:30 · 60 秒
 
-这是整套设计的核心决定：异常永远不画在天上。
-玩家看到的永远是星图上的一个圆，从 6 像素长到 160 像素。
+无声狂啸给我的是一句话：你逃不掉。
 
-为什么：解释会杀死恐惧。你一旦说「那是外星生物」，玩家就把它归类了，归类之后就不可怕了。
-我让玩家永远停在「我看见了，但我不知道我在看什么」的位置。
+那个游戏里，AI 不杀你，它留着你，永远折磨。玩家做的所有事都改变不了这件事。
 
-洛夫克拉夫特给的就是这个判准。他开篇说最古老最强烈的恐惧是对未知的恐惧，
-然后说真正的诡异故事不能靠情节，要靠气氛。第一节第 1 段和第 7 段。
+我的对应做法：七天循环就是牢笼。你每天做同样的事，第六天表格开始拒绝你，
+第七天床不让你睡，最后你连走路都不能自己控制，角色被押着走向湖边。
 
-我的偏离：他的主角是学者，靠读禁书接近真相；我的主角是看守，靠填表接近真相。
+注意这里的恐怖不是"我会不会死"，而是"我知道这事不会结束"。
 -->
 
 ---
-kicker: 机制三 · 表格
+kicker: 机制三 · 日常的异常
 ---
 
-# 系统有一个立场，而那个立场不包括你。
+# 恐怖发生在你还得继续过日子的时候。
 
 <div class="body col">
-<img src="/obs/report.png" alt="汇报表格" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/day1_outdoor.png" alt="观测站外景" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>汇报只问「图中有异常吗」，只有 Yes / No。前五天两个都推进；<b>第六天起拒绝 Yes 以外的一切</b>，红字 Type Yes，并把被拒的答案留在框里。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>这是全游戏唯一会「回应」玩家的东西——而它回应的方式是否定你。恐惧从「外面有东西」转成<b>「里面没有人在听」</b>。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>卡夫卡式官僚恐怖 + 互联网「规则怪谈」：一套必须遵守、却无法完全遵守的规则。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>拒绝时<b>不清空输入框</b>：玩家必须亲手删掉自己的答案才能重答。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>Fears to Fathom</b>：每一集都是普通人的普通一晚——独自在家、搭车、送外卖——然后有一件事开始不对。<b>Chilla's Art</b>：便利店、公寓、夜班，同样的路子。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>不是"你被扔进了鬼屋"，而是<b>"你的日常还在继续，只是多了一点东西"</b>。日常的持续让异常显得更不对。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>游戏里<b>没有任何一场战斗、追逐或跳吓</b>。你照常加油、打水、调天线、填表——异常只是每天多几个像素。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Kirkland</b>：日常空间被改写成哥特式空间，是这类作品的核心手法。</p></div>
 </div>
 </div>
 
 <!--
-2:55–3:50 · 55 秒
+3:30–4:30 · 60 秒
 
-第六天开始，输入框只接受 Yes。你打 No，它红字显示 Type Yes，而且把 No 留在框里。
-你必须先删掉自己写的东西，才能重答。
+Fears to Fathom 和 Chilla's Art 教我的同一件事：恐怖不用发生在鬼屋。
 
-为什么这一条比其他几条更难受：它是全游戏唯一会回应你的系统。没有 NPC、没有旁白跟你说话，
-只有这张表。而它回应的方式，是拒绝。
+Fears to Fathom 每一集都是一个普通人的普通晚上——一个人在家、搭顺风车、送外卖。
+Chilla's Art 是便利店、公寓、夜班。
 
-来源：卡夫卡式的官僚，加上中文互联网的规则怪谈——一套你必须遵守，却没法完全遵守的规则。
+关键不是"你被扔进了一个恐怖的地方"，而是"你的日常还在继续，只是多了一点东西"。
+你要接着上班，接着填表，接着睡觉。
+
+我的做法：整款游戏没有战斗、没有追逐、没有跳吓。你就是在过日子。
 -->
 
 ---
-kicker: 机制四 · 缺席
+kicker: 机制四 · 孤独
 ---
 
-# 本该有人的地方，空着。
+# 有人说话，但那个人不在。
 
 <div class="body col">
-<img src="/obs/storm.png" alt="第五天暴雨" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/storm.png" alt="暴雨" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p><b>零 NPC</b>。全游戏唯一的人声是开场时前任看守的四条语音留言——而前任已经走了。此后只能读字，不能对话。玩家角色全程不说话。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>所有行动都没有见证者，也没有回应者。床、杯子、前任留下的痕迹都在，唯独没有人。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者</span><p><b>Fisher</b>：eerie 是「本该空无之处却有东西，或本该有东西之处却空无」。<i>（线索：正文未读，措辞待核）</i></p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>前任留言<b>语气轻松、不做预示</b>：越正常，后面越不对。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>看火人</b>：一个人守一座瞭望塔，整款游戏只有一个声音——无线电另一头的人。你看不见她。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>声音让孤独变得<b>可测量</b>：你知道有人在，但她不在。孤独不是"没有人"，是"只有声音"。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>全游戏<b>零 NPC</b>。唯一的人声是开场时前任看守的四条语音留言——而那个人已经走了。之后只有字。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 我的取舍</span><p>看火人给了玩家一个活着的对话者；我把她换成了<b>一个已经离职的人</b>。声音还在，人不在。</p></div>
 </div>
 </div>
-
-::foot::
-
-来源参照：北极／孤岛恐怖传统——*The Thing* (1982)、*The Shining* (1980)、*The Lighthouse* (2019)。
 
 <!--
-3:50–4:45 · 55 秒
+4:30–5:30 · 60 秒
 
-游戏里没有 NPC。唯一的人声是开场那四条留言，来自一个已经离职的前任看守。
-之后你只能读字。你自己也不说话，只有独白。
+看火人和我的结构几乎同源：一个人守一座塔，整局只有一个声音从机器里出来。
 
-为什么：所有行动都没有人看见。你加油、打水、填表，没有人在乎，也没有人回应。
-观测站有床、有杯子、有前任留下的东西，唯独没有人。
+但它给了玩家一个活着的对话者——你可以跟她说话，她每天在。
+我做了一个更狠的版本：那个人已经离职了。你听到的是**留言**，不是对话。
+四条，讲完就没了。之后全游戏再没有第二个人声。
 
-Fisher 的 eerie 说的就是这件事：本该有人的地方空着。
-必须说明：Fisher 我还没读到正文，这是我的预期。
-
-文化参照：北极和孤岛恐怖——《怪形》《闪灵》《灯塔》，都是把人关在一个设施里。
+这个改动让孤独从"有人在但我见不到"变成"那个人已经不在了"。
 -->
 
 ---
-kicker: 机制五 · 界面异化
+kicker: 机制五 · 低画质与屏中屏
 ---
 
-# 恐怖发生在最日常的界面上。
+# 粗糙的画面本身，和屏幕里的屏幕。
 
 <div class="body col">
-<img src="/obs/gift.png" alt="The Gift of X" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/gift.png" alt="桌面里的小游戏" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>站内电脑是一套仿 Windows XP 的桌面：任务栏、开始菜单、三个文档图标。<b>第二天，第四个图标凭空出现</b>——一枚沾血的羊头骨，没有安装过程，没有解释，点开真的能玩。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>玩家熟悉 XP 界面的每个细节。正因为熟悉，多出来的那个图标才显得不对——它不吓人，它只是<b>不该在那里</b>。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>analog horror 与家用电脑恐怖：恐怖发生在屏幕里，而不是屋外。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>桌面同时是叙事容器（须知、星图、汇报都在里面），恐怖因此<b>不需要离开界面</b>。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>Chilla's Art</b>：低多边形、低分辨率、VHS 质感——<b>画质本身就是恐怖的一部分</b>。<b>Sally Face</b>：角色在游戏里掏出一台 GameBoy，真的能玩。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>低画质让细节消失，玩家必须自己填补——和机制一同一原理。屏中屏则让恐怖发生在<b>最日常的界面上</b>。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>320×180 固定分辨率。桌面是仿 XP 的，第二天凭空多出一个<b>沾血羊头骨的图标</b>，点开真的能玩。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 我的取舍</span><p>Chilla's Art 的粗糙是"做旧"，我的粗糙是<b>像素尺度的限制</b>——320×180 下每个元素都必须落在网格上。</p></div>
 </div>
 </div>
 
 <!--
-4:45–5:30 · 45 秒
+5:30–6:30 · 60 秒
 
-站里的电脑是一个 XP 风格的桌面。须知、星图、汇报全在里面。
-第二天，第四个图标出现了：一枚沾血的羊头骨，没有安装过程，没有解释，点开是个能玩的街机游戏。
+Chilla's Art 教我一件事：画质本身可以是恐怖的一部分。
+低多边形、低分辨率、VHS 噪点，让细节消失，玩家只能自己想象。
 
-它不是 jump scare，它甚至不吓人。它只是不该在那里。
-恐怖发生在最日常的界面里——analog horror 用的就是这一招。
+Sally Face 教的是另一件事：屏中屏。角色在游戏里掏出一台 GameBoy，真的能玩。
+
+我的做法：整个世界 320×180。电脑是仿 XP 的桌面，第二天多出一个图标——一枚沾血的羊头骨，
+点开是一个真的能玩的街机游戏。
+
+屏中屏为什么有效：恐怖发生在最日常的界面上。你熟悉那个桌面，所以多出来的东西才不对。
 -->
 
 ---
-kicker: 机制六 · 失控
+kicker: 机制六 · 内在的恐怖
 ---
 
-# 从「我不理解」到「我不再操作」。
+# 怪物在外面，问题在里面。
 
 <div class="body col">
-<img src="/obs/redline.png" alt="第七天" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/flesh.png" alt="第六天" style="height: 210px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>第七天：汇报后桌面渐黑，红字浮出 BEHOLD HER THRONE, LAMB；回房后<b>床拒绝互动</b>；三十秒后玩家被强制走向湖边；结局全程无输入。</p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>前五个机制剥夺的是<b>理解</b>，这一个剥夺<b>能动性</b>——而且发生在玩家已经忍耐了六天例行工作之后。</p></div>
-<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者 / 来源</span><p><b>Carroll</b>：恐怖由「不纯的」怪物引发——同时属于两个互斥范畴（血肉教堂＝建筑＋血肉；血星＝天体＋神性）。<i>（线索，未读）</i></p></div>
-<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>强制移动期间按键无效；结局不给选择、不给解释，只有标题。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">① 从哪来</span><p><b>寂静岭</b>：雾、废弃小镇、另一个世界。怪物不是随机的，它们长在角色的罪与恐惧上。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">② 为什么有效</span><p>真正被审视的不是怪物，<b>是角色</b>。玩家的不安来自"这些东西指涉的是我"。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">③ 我怎么改</span><p>观测站没有罪案，但有一个<b>一直在记录、却从不判断</b>的人。恐怖不是"我做错了什么"，而是"我什么都没做，只是把它写下来了"。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 6px 0"><span class="label">④ 文献</span><p><b>Kirkland</b>：寂静岭把哥特传统里的"过去侵入现在"改写成可玩的形式——罪恶感变成可探索的空间。</p></div>
 </div>
 </div>
 
-::foot::
-
-宗教来源：《启示录》8:10–11（苦艾星从天上坠落）、6:12（月变血）；羔羊与宝座的措辞。
-
 <!--
-5:30–6:20 · 50 秒
+6:30–7:20 · 50 秒
 
-第七天，汇报交上去之后，桌面开始变黑，红字浮出来：BEHOLD HER THRONE, LAMB。
-回到房间，床不再让你睡。三十秒后你不能控制角色了，他自己走向湖边。结局没有输入。
+寂静岭给的是心理恐怖：怪物长在角色的罪与恐惧上。看的不是怪物，是这个人。
 
-前面五条剥夺的是理解，这一条剥夺的是行动。而且它发生在你忍了六天之后——
-如果第一天就这样，玩家只会觉得莫名其妙。
+我的版本里没有罪案。观测站没有谁做错了事。
+恐怖的位置换了一下：不是"我做错了什么"，而是"我什么都没做，我只是把它写下来了"。
 
-Carroll 会说这是「不纯的怪物」：血肉教堂是建筑加血肉，血星是天体加神性，
-两者都同时属于两个不该相容的范畴。这一条我还没读到正文，是预期。
+这一点和机制二、机制三合起来才是完整的：
+你逃不掉，你在照常过日子，而你每天都在为那个东西做记录。
 
-文化来源很直接：《启示录》里苦艾星从天上坠落，月亮变血。结局用的就是这套图像。
--->
-
----
-kicker: 文化来源谱系
----
-
-# 六个机制，六条来路。
-
-| 机制 | 文化来源 | 具体接在哪 |
-|---|---|---|
-| ① 重复 | 日常恐怖 · 循环叙事 | 把熟悉变成不对劲，而不是把陌生塞给你 |
-| ② 不可知 | **宇宙恐怖**（Lovecraft 1927） | 恐惧来自未知；气氛重于情节；自然法则的「中止」 |
-| ③ 表格 | 卡夫卡式官僚 · 规则怪谈 | 机构不回应，只记录；规则无法被完全遵守 |
-| ④ 缺席 | **eerie**（Fisher）· 北极／孤岛恐怖 | *The Thing*、*The Shining*、*The Lighthouse* 的隔离设施 |
-| ⑤ 界面异化 | analog horror · 家用电脑恐怖 | 恐怖发生在屏幕里；多出来的那个图标 |
-| ⑥ 失控 | **宗教末世图像** · 哥特小说 | 《启示录》苦艾星与血月；哥特城堡＝当代科考设施 |
-
-::foot::
-
-「观测站」本身是当代哥特城堡：有历史、有前任、有秘密、被隔绝在荒野里。Walpole, *The Castle of Otranto* (1764) 以来的老配方。
-
-<!--
-6:20–7:05 · 45 秒
-
-这一页是整场展示的答案之一：六条来路。
-宇宙恐怖给「不可知」，eerie 给「缺席」，官僚与规则怪谈给「表格」，
-analog horror 给「界面」，启示录给「失控」，日常恐怖给「重复」。
-
-顺便说一句：观测站就是当代版的哥特城堡。哥特小说从十八世纪起就用一座有历史、
-有秘密、被隔绝的建筑来装恐怖，我只是把城堡换成科考站，把幽灵换成一个参数。
+Kirkland 那篇论文讲的就是寂静岭怎么把哥特传统改写成可玩的形式。
+摘要我读了，正文在付费墙后。
 -->
 
 ---
 kicker: 学术对话
 ---
 
-# 三篇文献，各接一条机制。
+# 三篇游戏研究，各解释一个"为什么有效"。
 
-| 文献 | 它的论点 | 接在我的哪条机制上 | 阅读状态 |
+| 文献 | 它的论点 | 解释我的哪条机制 | 阅读状态 |
 |---|---|---|---|
-| **Lovecraft**,〈Supernatural Horror in Literature〉(1927) | 最古老最强烈的恐惧是对未知的恐惧；判准是气氛而非情节 | 机制② 不可知：不解释、不给答案 | **已读全文**（第一节，第 1、6–7 段） |
-| **Carroll**, *The Philosophy of Horror* (Routledge, 1990) | 恐怖由「不纯的」怪物引发——同时属于两个互斥范畴 | 机制⑥ 失控：血肉教堂、血星 | **线索**，正文未读 |
-| **Fisher**, *The Weird and the Eerie* (Repeater, 2016) | weird＝本不该存在；eerie＝本该空无之处却有东西 | 机制④ 缺席：观测站与森林 | **线索**，正文未读 |
+| **Kirkland**,〈Gothic Videogames, Survival Horror, and the *Silent Hill* Series〉, *Gothic Studies* 14:2 (2012), 106–122 | 哥特传统（过去侵入现在、碎裂叙事、另一个世界）在生存恐怖游戏里被改写成可玩的形式 | ③ 日常的异常 · ⑥ 内在的恐怖 | **已读摘要**（第 106 页），正文付费墙 |
+| **Costikyan**, *Uncertainty in Games*, MIT Press (2013) | 游戏的趣味来自由规则管理的不确定性 | ① 低信息 | **线索**，正文未读 |
+| **Stobbart**, *Videogames and Horror*, Univ. of Wales Press (2019) | 恐怖游戏把玩家的能动性、身体与视角当作可被剥夺的对象 | ② 不可逃脱 | **线索**，正文未读 |
 
 ::foot::
 
-检索与定位见 `research/references/bibliography.md`；Lovecraft 为公有领域全文。
+它们不解释灵感来源——灵感来源是上面那七款游戏。它们解释这些手法为什么有效。
 
 <!--
-7:05–8:00 · 55 秒
+7:20–8:10 · 50 秒
 
-三篇不是随便配的，每篇接一条机制。
-Lovecraft 接不可知——这条我读完了全文，可以引，第一节第 1 段和第 7 段。
-Carroll 接失控——他讲怪物是范畴越界，血肉教堂和血星正好。
-Fisher 接缺席——eerie。
+三篇的位置要说清楚：它们不是我的灵感来源，是我用来解释为什么有效的工具。
 
-必须说清楚：Carroll 和 Fisher 我还没读到正文，是线索，不是发现。
-Daston 和 Gitelman 我已经撤掉了——那是我上一版把项目当成官僚客观性来论证时用的，方向不对。
+Kirkland 解释寂静岭和哥特传统——我读了摘要，第 106 页，正文在付费墙后，可以引摘要。
+Costikyan 解释低信息——不确定性是游戏张力的来源。这本书我没读到正文，是线索。
+Stobbart 解释能动性被剥夺——正是无声狂啸给我的那条。也是线索。
+
+我明说：三篇里只有一篇读了摘要，两篇是线索。
 -->
 
 ---
 kicker: 我的贡献
 ---
 
-# 把「不可知」从阅读变成操作。
+# 把"低信息"从观看变成劳动。
 
 <div class="body col">
-<div class="frame hot"><span class="label">三篇文献合起来还缺的</span><div class="text">在洛夫克拉夫特那里，不可知是<b>被读到</b>的：主角读到禁书，读者读到他的恐惧。恐怖发生在阅读里。</div></div>
-<div class="frame"><span class="label red">我的设计做了什么</span><div class="text">不可知是<b>被操作</b>的：玩家每天亲手把那个东西画进星图，然后给它填一个 Yes。恐惧不来自「我读到了不该读的」，而来自<b>「我一直在为它做记录」</b>。</div></div>
+<div class="frame hot"><span class="label">这些游戏还没做的一件事</span><div class="text">铁肺让你<b>拍一张照片</b>去看外面——你仍然是观察者，只是工具很差。<br />Chilla's Art 让你<b>在店里打工</b>——日常是背景，恐怖是插入的事件。</div></div>
+<div class="frame"><span class="label red">我的设计做了什么</span><div class="text">在这款游戏里，<b>记录本身就是劳动</b>：你每天亲手把那个东西画进星图，然后给它填一个 Yes。恐怖不来自"我没看清"，而来自<b>"我看清了，而且我签字了"</b>。</div></div>
 </div>
 
 <!--
-8:00–8:35 · 35 秒
+8:10–8:50 · 40 秒
 
 如果只讲一句贡献，就是这一句。
-在洛夫克拉夫特那里，恐怖发生在阅读里——主角读禁书。
-在这里，恐怖发生在操作里——你每天把它画下来，然后给它填 Yes。
 
-第二个贡献是恐怖建立在例行公事上。多数恐怖游戏用事件打断日常；
-这款游戏让日常本身成为载体：七天里唯一的变化是一个数字，而那个数字是你自己写下来的。
+铁肺里你仍然是观察者，只是工具很差——你拍一张照片，看不清。
+Chilla's Art 里日常是背景，恐怖是插进来的事件。
+
+我的版本把这两件事合起来了：记录本身是劳动。你每天画星图，然后填表签字。
+恐怖不来自"我没看清"，来自"我看清了，而且我签字了"。
+
+这就是我和那七款游戏的分界线。
 -->
 
 ---
 kicker: 技术栈
 ---
 
-# 机制怎么被做出来的。
+# 这些机制是怎么被做出来的。
 
 | 技术 | 作用 | 为什么 | 局限 |
 |---|---|---|---|
 | **Godot 4.7.2 / GDScript** | 引擎与全部逻辑 | 免费、可脚本化、2D 强，有**无头模式**可不开窗口测试 | 边界处类型松散，部分错误只在运行时暴露 |
-| **程序化绘制** | 几乎全部美术 | 像素锁在 320×180；每个元素都是带参数的函数，可测 | 无着色器 → 第四天「模糊」是撕裂拖影 |
-| **固定虚拟分辨率** 320×180 / 桌面 640×360 | 构图 | 「玩家居中」「地面行固定」成为构造保证 | 10 px 以下文字不可读 |
-| **门控状态机 + 无头测试** | 保证七天完全一致 | 恐怖依赖节奏，节奏依赖顺序：414 项模块检查 + 112 项完整七日通关 | 读回像素的两道门禁必须开窗口 |
+| **程序化绘制** | 几乎全部美术 | 320×180 每个元素锁在像素网格上；每个元素都是带参数的函数，可测 | 无着色器 → 第四天「模糊」是撕裂拖影 |
+| **固定虚拟分辨率** 320×180 / 桌面 640×360 | 低画质与屏中屏 | 「玩家居中」「地面行固定」成为构造保证；桌面是第二个分辨率层 | 10 px 以下文字不可读 |
+| **门控状态机 + 无头测试** | 保证七天完全一致 | 机制一/三依赖节奏，节奏依赖顺序：414 项模块检查 + 112 项完整七日通关 | 读回像素的两道门禁必须开窗口 |
 | **缺失：音频** | — | — | 全程无声；是缺口，不是选择 |
 
 <!--
-8:35–9:20 · 45 秒
+8:50–9:30 · 40 秒
 
-用自己的话讲。为什么 Godot：免费、可脚本化，无头模式让我能不开窗口证明七天顺序不能被打乱——
-恐怖依赖节奏，节奏依赖顺序，所以顺序必须是被测试保证的，不能靠感觉。
+用自己的话讲。
 
-为什么程序化：320×180 每个元素都要落在像素网格上，用代码画就没有素材管线，而且每个元素都是可测的函数。
+为什么 Godot：免费、可脚本化，无头模式让我不开窗口就能证明七天顺序不能被打乱——
+因为我这套恐怖是建立在"每天完全一样"上的，顺序错一次，机制一就失效。
 
-诚实的局限：没有着色器，第四天不是真模糊；完全没有音频——这是缺口，不是设计。
-如果我说沉默是气氛，那我刚才讲的机制四就站不住了。
+为什么程序化：320×180 下每个元素都要落在像素网格上，用代码画就没有素材管线；
+而且 Chilla's Art 那种低画质的粗糙感，在代码里是精确可控的——我能决定每一棵树的位置。
+
+诚实的局限：没有着色器，第四天不是真模糊；完全没有音频。
 -->
 
 ---
 kicker: 收尾
 ---
 
-# 恐怖不需要事件。
+# 恐怖不需要怪物，它需要一个你每天都要做的动作。
 
 <div class="body col">
-<div class="frame"><span class="label">我还欠这个拆解的两件事</span><div class="text">① 读完 Carroll 与 Fisher，各找到一段带页码的原文。<br />② 验证沉默：是气氛，还是只是没做完——这决定机制四成不成立。</div></div>
+<div class="frame"><span class="label">我还欠这次拆解的两件事</span><div class="text">① 读完 Costikyan 与 Stobbart，各找到一段带页码的原文。<br />② 验证沉默：是气氛还是没做完——这决定机制四成不成立。</div></div>
 </div>
 
 ::foot::
@@ -360,15 +335,15 @@ kicker: 收尾
 谢谢，欢迎提问。
 
 <!--
-9:20–10:00 · 40 秒
+9:30–10:00 · 30 秒
 
-用一句话收尾：恐怖不需要事件，它需要节奏、不可知，和一个不肯听你说话的系统。
+用这句话收尾：恐怖不需要怪物，它需要一个你每天都要做的动作。
 
-然后主动说出两件没做完的事。自己认领缺口比被问出来强。
+然后主动说出两件没做完的事。
 
 可能的问题：
-1「为什么不做成电影或小说？」——因为这些机制里有两个（表格、失控）需要玩家亲手操作才成立。
-2「小游戏是玩笑吗？」——不是。它是唯一给玩家他想要的数字的界面，是所有其他数字的反面。
-3「强制 Yes 不就是 bug？」——有可能，这是设计文档里的未决问题。如果被读成 bug，机制三就失效。
-4「为什么撤掉 Daston 和 Gitelman？」——因为那是把项目当成官僚客观性来论证，方向错了；这次拆的是恐怖机制。
+1「这些游戏你只是参考，不算研究吧？」——对，它们是**文化来源**，不是学术讨论。学术讨论是三篇游戏研究，用来说明这些手法为什么有效。
+2「小游戏是玩笑吗？」——不是，Sally Face 的 GameBoy 是我的直接参照，屏中屏是机制五的一半。
+3「最强的影响是哪一款？」——铁肺。低信息这一条决定了整个星图设计。
+4「为什么撤掉了 Daston 和 Gitelman？」——因为我最初的框架错了，把项目当成官僚故事论证；真正的来源是游戏。
 -->
