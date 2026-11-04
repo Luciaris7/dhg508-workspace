@@ -66,19 +66,19 @@ kicker: 来源截图
 # 七款游戏的画面。
 
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px;">
-<div><img src="/obs/ref/ironlung.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">IRON LUNG · 低信息</div></div>
-<div><img src="/obs/ref/ihavenomouth.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">I HAVE NO MOUTH · 不可逃脱</div></div>
-<div><img src="/obs/ref/fearstofathom.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FEARS TO FATHOM · 日常的异常</div></div>
-<div><img src="/obs/ref/firewatch.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FIREWATCH · 孤独</div></div>
-<div><img src="/obs/ref/chillasart.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">CHILLA'S ART · 低画质</div></div>
-<div><img src="/obs/ref/sallyface.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SALLY FACE · 屏中屏（GEAR BOY）</div></div>
-<div><img src="/obs/ref/silenthill.jpg" style="width:100%; height:168px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SILENT HILL 2 · 内在的恐怖</div></div>
-<div style="display:flex; align-items:center; padding-left:8px;"><p style="margin:0;"><b>Iron Lung 的潜艇相机</b>直接变成了我的星图；<b>Sally Face 那张脸</b>说明了低画质为什么会让人不适。</p></div>
+<div><img src="/obs/ref/ironlung.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">IRON LUNG · 低信息</div></div>
+<div><img src="/obs/ref/ihavenomouth.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">I HAVE NO MOUTH · 不可逃脱</div></div>
+<div><img src="/obs/ref/fearstofathom.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FEARS TO FATHOM · 日常的异常</div></div>
+<div><img src="/obs/ref/firewatch.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">FIREWATCH · 孤独</div></div>
+<div><img src="/obs/ref/chillasart.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">CHILLA'S ART · 低画质</div></div>
+<div><img src="/obs/ref/sallyface.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SALLY FACE · 屏中屏（GEAR BOY）</div></div>
+<div><img src="/obs/ref/silenthill.jpg" style="width:100%; height:268px; object-fit:cover; border:1px solid #444;" /><div class="label" style="margin-top:5px;">SILENT HILL 2 · 内在的恐怖</div></div>
+
 </div>
 
 ::foot::
 
-截图取自各作的 Steam 商店页面，仅用于课堂评论。
+**Iron Lung 的潜艇相机**直接变成了我的星图；**Sally Face 的掌机**说明了屏中屏怎么做。截图取自各作 Steam 商店页面，仅用于课堂评论。
 
 <!--
 1:15–1:25 · 10 秒，快速扫过
