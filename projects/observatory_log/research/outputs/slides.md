@@ -1,7 +1,7 @@
 ---
 framework: react
 theme: exhibit
-title: "观测站日志 — 表格比观察活得更久"
+title: "观测站日志 — 恐怖的机制与文化来源"
 routerMode: hash
 layout: cover
 kicker: DAIHUM · 第九週 · 將你的 AI 設計放進學術討論
@@ -10,292 +10,349 @@ duration: 10min
 timer: countdown
 ---
 
-# 观测站日志
+# 恐怖的机制，与它的来源
 
-表格比观察活得更久。
+《观测站日志》：一款七天里什么都不发生的游戏。
 
 ::by::
 
-一款七日制像素恐怖游戏：你在给一片正在变化的天空填表。
+单人 · 2D 横版 · 像素 · 七日 · 一个结局
 
 <!--
 0:00–0:40 · 40 秒
 
-一句话讲完，不要念幻灯片。
+一句话讲完。
 
-「我做了一款七日制游戏。你是偏远观测站的新看守。每天加油、打水、调天线、
-记录星图、填一张汇报表。天空在变，表格没变。」
+「这游戏七天里什么都不发生。没有怪物追你，没有跳吓，没有战斗，没有任何解释。
+今天我只讲两件事：它是怎么吓人的，以及这些手法分别从哪来。」
 
-然后把问题抛出来：当一份记录所记录的东西不再可被记录时，这份记录会怎样？
+不要说「这是一款关于官僚制的游戏」——那是我上一版的方向，错了。
 -->
 
 ---
 kicker: 问题
 ---
 
-# 当一份记录所记录的东西不再可被记录时，这份记录会怎样？
+# 没有怪物、没有事件、不作解释，恐怖靠什么成立？
 
 <div class="body col">
-<div class="frame hot"><span class="label">我要论证的主张</span><div class="text">表格比观察活得更久。玩家已经无法诚实观看，而机构的仪器照样收下 <mark>Yes</mark>，日子照样推进，记录照样看起来完整。</div></div>
+<div class="frame hot"><span class="label">我拆出来的六个机制</span><div class="text">① 重复　② 不可知　③ 表格　④ 缺席　⑤ 界面异化　⑥ 失控<br /><br />每一个我都回答三件事：<b>怎么运作</b>、<b>为什么吓人</b>、<b>从哪来</b>。</div></div>
 </div>
 
 ::foot::
 
-设计五个部分 · 三项学术文献 · 一个主张 · 技术栈
+三项学术文献分别接在 ②④⑥ 上；①③⑤ 用文化来源说明。
 
 <!--
-0:40–1:00 · 20 秒
+0:40–1:05 · 25 秒
 
-这就是论点，后面全部是它的证据。
-现在把结构讲清楚：设计五个部分、三篇文献、一个主张，最后讲技术栈。
+先把地图给出来。六个机制不是六个点子，是一条链：
+重复让你熟悉 → 不可知让你无法确认 → 表格让你无法上报 → 缺席让你无人可说 →
+界面让恐怖发生在日常里 → 失控最后剥夺你的行动。
+
+来源会在每一页单独标，最后有一页汇总谱系。
 -->
 
 ---
-kicker: 一 · 情节 — 七日循环
+kicker: 机制一 · 重复
 ---
 
-# 例行公事本身就是内容。
+# 恐怖需要一把尺子。
 
 <div class="body col">
-<img src="/obs/antenna.png" alt="调整天线" style="height: 225px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/antenna.png" alt="调整天线" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">① 设计是什么</span><p>每天五个节点，强制按序：加油 → 打水 → 调天线 → 记录星图 → 提交汇报。完成前两道分别转黄昏、转夜晚。<b>观测永远在天黑之后。</b></p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">② 意义</span><p>奇观被刻意扣留。重复到某一天，重复本身成为内容——异常不是事件，是文档里的一处漂移。</p></div>
-<div class="row hot" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">③ 学者</span><p><b>Daston</b>：观察是「被创造并维持的本体论」，是维持，不是接收。</p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">④ 我的贡献</span><p>把「维持」做成可操作的东西：玩家每天亲手重画同一片天空。</p></div>
-</div>
-</div>
-
-::foot::
-
-接口刻意不戏剧化：加油是长按，打水是单次按键，调天线只有 ±3 度容差和 `SEARCHING / LOCKED` 两种读数。
-
-<!--
-0:40–2:00 · 80 秒
-
-是什么：北方针叶林里的观测站。雪、树、湖、碟形天线、一间小屋、一个人。
-能做什么：几乎没有戏剧性动作。长按加油、按键打水、把天线转到 LOCKED、看一张星图、填一张表。
-为什么：扣留奇观，让重复被感受为劳动。
-意义：异常不是事件，是文档里的一处漂移。
-学者：Daston。
-贡献：把「维持」做成可操作的动作。
--->
-
----
-kicker: 二 · 机制 — 汇报表格
----
-
-# 表格不是菜单，是一台有偏好的仪器。
-
-<div class="body col">
-<img src="/obs/report.png" alt="汇报表格" style="height: 225px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
-<div class="rows">
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">① 设计是什么</span><p>一个问题、两个按钮。第一至五天：两个答案都推进，但 <b>No 会多出工作</b>——第三天出门检修天线，第四天擦屏幕、吃安眠药。</p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label red">第六至七天</span><p>输入框拒绝 Yes 以外的一切，红字 <mark>Type Yes</mark>，并把被拒的答案<b>留在框里</b>。</p></div>
-<div class="row hot" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">③ 学者</span><p><b>Gitelman</b>：文件是有自身历史的媒介类型，而不是知识的容器。<i>（线索：记录已核实，正文未读）</i></p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">④ 我的贡献</span><p>表格不是通往异常的窗口，而是决定「什么才算异常」的东西；当观察失效，它仍在工作。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>七天走同一套五步：加油 → 打水 → 调天线 → 记录星图 → 填表。强制顺序，<b>没有失败状态</b>。加油是长按，打水是单次按键，调天线是 ±3 度的旋转。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>玩家必须先背下节奏，异常才有地方长出来。真正不安的不是第七天的血星，而是第三天那 6 个像素——因为它出现在一个你已经熟悉的画面里。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>日常恐怖（domestic horror）：把熟悉的东西变得不对劲。光照被写死，让节奏可记忆。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>例行工作<b>不做成可失败的</b>。玩家打不过这一天，只能过完它。</p></div>
 </div>
 </div>
 
 <!--
-2:00–4:00 · 2 分钟 —— 最长也最重要的一页。
+1:05–2:00 · 55 秒
 
-这是我最有把握的设计，也是论点所在。
-1–5 天：两个答案都能推进，但不是同一天。No 要付出劳动。
-6–7 天：表格有了偏好。它不接受 No，还把被拒的文字留在框里，你得先删掉才能再答。
+游戏里七天做同样五件事。没有失败状态，这是刻意的：恐怖需要稳定的背景，异常才有对比。
 
-学者：Gitelman。必须明说「这是线索，我核实了记录，还没读到正文」。
-然后给出我要拿它检验的主张：表格不是窗口，而是决定什么算异常的装置。
+如果你第一次玩就被扔进血星下面，那是奇观，不是恐怖。
+只有当你背下了这五步、知道每天天会黑、知道床在哪，第三天星图上多出来的六个像素才扎人。
 
-现在把贡献讲掉：表格比观察活得更久。
-不是「机构是盲的」（那是主题），而是「仪器在操作者停下之后仍然工作」（这是玩家亲手操作的机制）。
+文化来源：日常恐怖——把熟悉的东西变陌生。所以我把光照写死，让节奏稳定可记。
 -->
 
 ---
-kicker: 三 · 画面 — 星图是唯一证据
+kicker: 机制二 · 不可知
 ---
 
-# 天上什么都看不见。异常只出现在星图里。
+# 你看见了，但你不知道自己在看什么。
 
 <div class="body col">
-<img src="/obs/starchart.png" alt="星图" style="height: 225px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/starchart.png" alt="星图" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">① 设计是什么</span><p>固定星场、一条地平线、一颗逐日变化的星体：第 3 天 6 px，第 4 天 10 px，第 5 天 28 px，第 6 天 60 px，<b>第 7 天 160 px</b>。天空里从不渲染它。</p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">② 意义</span><p>记录不是天空的替代品，而是<b>唯一让异常可见的装置</b>。</p></div>
-<div class="row hot" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">③ 学者</span><p><b>Daston</b>（摘要，第 97 页）：「ontologies created and sustained by observation」。</p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">④ 我的贡献</span><p>坦白说：这最初是 320×180 画不出天体的偷懒，后来发现它才是对的设计。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>异常<b>从不出现在天空里</b>。它只是星图上的一个参数：第 3 天 6 px，第 4 天 10，第 5 天 28，第 6 天 60，第 7 天 160。没有一句解释，结局也不解释。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>解释会终结恐惧。一旦玩家知道「那是什么」，它就从未知降级成怪物——而怪物是可以被理解、被对抗的。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者</span><p><b>Lovecraft</b>（1927，第一节）：最古老最强烈的恐惧是对未知的恐惧；真正的恐怖故事以<b>气氛</b>而非情节为判准。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>天空永远只画星星和月亮。异常只以「角度／距离／直径」三个数字存在。</p></div>
 </div>
 </div>
 
 ::foot::
 
-Daston 2008，*Isis* 99(1): 97–110，摘要第 97 页。正文在付费墙后，未读。
+H. P. Lovecraft, "Supernatural Horror in Literature" (1927), 第一节，第 1 段与第 7 段。全文已读。
 
 <!--
-4:00–5:40 · 100 秒
+2:00–2:55 · 55 秒
 
-先坦白来源：我画不出可信的星体，所以把异常放进了星图。然后这个偷懒变成了更好的设计。
-玩家确实看见了异常——只是在自己画的星图上，作为工作的一部分。他们做不到的是在别处看见。
-Daston：观察是被维持的；星图就是这种维持的可见形式。原句念一遍，页码说出口：第 97 页。
-偏离之处：Daston 讲的是共同体训练一只集体的眼睛；我的站里只有一个人，训练手册是一个 txt。
+这是整套设计的核心决定：异常永远不画在天上。
+玩家看到的永远是星图上的一个圆，从 6 像素长到 160 像素。
+
+为什么：解释会杀死恐惧。你一旦说「那是外星生物」，玩家就把它归类了，归类之后就不可怕了。
+我让玩家永远停在「我看见了，但我不知道我在看什么」的位置。
+
+洛夫克拉夫特给的就是这个判准。他开篇说最古老最强烈的恐惧是对未知的恐惧，
+然后说真正的诡异故事不能靠情节，要靠气氛。第一节第 1 段和第 7 段。
+
+我的偏离：他的主角是学者，靠读禁书接近真相；我的主角是看守，靠填表接近真相。
 -->
 
 ---
-kicker: 四 · 环境 — eerie
+kicker: 机制三 · 表格
 ---
 
-# 恐怖是结构性的，不是怪物性的。
+# 系统有一个立场，而那个立场不包括你。
 
 <div class="body col">
-<img src="/obs/flesh.png" alt="第六天的血肉" style="height: 225px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<img src="/obs/report.png" alt="汇报表格" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
 <div class="rows">
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">① 设计是什么</span><p>雪、针叶林、湖、一间小屋、一只碟形天线。没有别人。一个离开的前任。一份内容就是等待的工作。第五天暴雨，第六至七天血肉覆盖全世界。</p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">② 意义</span><p>本该有人的地方空着。恐怖来自缺席，而不是来自某个不该存在的东西。</p></div>
-<div class="row hot" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">③ 学者</span><p><b>Fisher</b>：eerie 是「本该空无之处却有东西，或本该有东西之处却空无」。<i>（线索：正文未读，措辞待核）</i></p></div>
-<div class="row" style="grid-template-columns: 165px 1fr; padding: 8px 0"><span class="label">④ 我的贡献</span><p>这里的 eerie 由例行公事产生：真正让人不安的，是一张仍在运作的表格。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>汇报只问「图中有异常吗」，只有 Yes / No。前五天两个都推进；<b>第六天起拒绝 Yes 以外的一切</b>，红字 Type Yes，并把被拒的答案留在框里。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>这是全游戏唯一会「回应」玩家的东西——而它回应的方式是否定你。恐惧从「外面有东西」转成<b>「里面没有人在听」</b>。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>卡夫卡式官僚恐怖 + 互联网「规则怪谈」：一套必须遵守、却无法完全遵守的规则。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>拒绝时<b>不清空输入框</b>：玩家必须亲手删掉自己的答案才能重答。</p></div>
+</div>
+</div>
+
+<!--
+2:55–3:50 · 55 秒
+
+第六天开始，输入框只接受 Yes。你打 No，它红字显示 Type Yes，而且把 No 留在框里。
+你必须先删掉自己写的东西，才能重答。
+
+为什么这一条比其他几条更难受：它是全游戏唯一会回应你的系统。没有 NPC、没有旁白跟你说话，
+只有这张表。而它回应的方式，是拒绝。
+
+来源：卡夫卡式的官僚，加上中文互联网的规则怪谈——一套你必须遵守，却没法完全遵守的规则。
+-->
+
+---
+kicker: 机制四 · 缺席
+---
+
+# 本该有人的地方，空着。
+
+<div class="body col">
+<img src="/obs/storm.png" alt="第五天暴雨" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<div class="rows">
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p><b>零 NPC</b>。全游戏唯一的人声是开场时前任看守的四条语音留言——而前任已经走了。此后只能读字，不能对话。玩家角色全程不说话。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>所有行动都没有见证者，也没有回应者。床、杯子、前任留下的痕迹都在，唯独没有人。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者</span><p><b>Fisher</b>：eerie 是「本该空无之处却有东西，或本该有东西之处却空无」。<i>（线索：正文未读，措辞待核）</i></p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>前任留言<b>语气轻松、不做预示</b>：越正常，后面越不对。</p></div>
 </div>
 </div>
 
 ::foot::
 
-Fisher 2016，*The Weird and the Eerie*，Repeater。OpenAlex 记录标 2017，引用前须核实年份。
+来源参照：北极／孤岛恐怖传统——*The Thing* (1982)、*The Shining* (1980)、*The Lighthouse* (2019)。
 
 <!--
-5:40–7:00 · 80 秒
+3:50–4:45 · 55 秒
 
-这座站几乎完全由缺席搭成。这是 Fisher 的 eerie，不是 weird：没有不该存在的怪物，
-只有一个本该有人的位置，空着。
-必须把阅读状态说出口：「Fisher 对我仍是线索。」这比被问出来强。
-贡献：恐怖来自例行公事——玩家害怕的是那张表格还在工作。
+游戏里没有 NPC。唯一的人声是开场那四条留言，来自一个已经离职的前任看守。
+之后你只能读字。你自己也不说话，只有独白。
+
+为什么：所有行动都没有人看见。你加油、打水、填表，没有人在乎，也没有人回应。
+观测站有床、有杯子、有前任留下的东西，唯独没有人。
+
+Fisher 的 eerie 说的就是这件事：本该有人的地方空着。
+必须说明：Fisher 我还没读到正文，这是我的预期。
+
+文化参照：北极和孤岛恐怖——《怪形》《闪灵》《灯塔》，都是把人关在一个设施里。
 -->
 
 ---
-kicker: 五 · 角色 — 反形式
+kicker: 机制五 · 界面异化
 ---
 
-# 游戏性是表格记录不了的东西。
+# 恐怖发生在最日常的界面上。
 
 <div class="body col">
-<div class="route">
-<div class="step"><span class="yr">第一天</span><p class="what">三个图标</p><p class="how">须知 · 星图 · 汇报</p></div>
-<div class="arrow">→</div>
-<div class="step red"><span class="yr">第二天</span><p class="what">第四个凭空出现</p><p class="how">沾血的羊头骨 · 没有安装过程 · 没有解释</p></div>
-</div>
-<div style="display: flex; gap: 56px; flex: 1; min-height: 0; align-items: center;">
-<img src="/obs/gift.png" alt="The Gift of X" style="height: 290px; width: auto; image-rendering: pixelated; border: 1px solid #333;" />
-<div class="frame" style="flex: 1;"><span class="label">THE GIFT OF X</span><div class="text">桌面里可玩的街机小游戏：一条船、礁石、分数。它是全游戏唯一会给玩家一个<b>他想要的</b>数字的界面。</div></div>
+<img src="/obs/gift.png" alt="The Gift of X" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<div class="rows">
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>站内电脑是一套仿 Windows XP 的桌面：任务栏、开始菜单、三个文档图标。<b>第二天，第四个图标凭空出现</b>——一枚沾血的羊头骨，没有安装过程，没有解释，点开真的能玩。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>玩家熟悉 XP 界面的每个细节。正因为熟悉，多出来的那个图标才显得不对——它不吓人，它只是<b>不该在那里</b>。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 从哪来</span><p>analog horror 与家用电脑恐怖：恐怖发生在屏幕里，而不是屋外。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>桌面同时是叙事容器（须知、星图、汇报都在里面），恐怖因此<b>不需要离开界面</b>。</p></div>
 </div>
 </div>
 
 <!--
-7:00–8:00 · 60 秒
+4:45–5:30 · 45 秒
 
-第二天，一个图标凭空出现，没有安装、没有解释、没有人评论。它是个可玩的街机游戏。
-游戏里其他每个数字都是替别人记的：多少升油、天线几度、一张星图。只有这个数字是给玩家的。
-贡献：它不是彩蛋，而是反形式——衡量汇报的那把尺子。
-如果被问是否叙事内：是，它就跑在桌面窗口里。
+站里的电脑是一个 XP 风格的桌面。须知、星图、汇报全在里面。
+第二天，第四个图标出现了：一枚沾血的羊头骨，没有安装过程，没有解释，点开是个能玩的街机游戏。
+
+它不是 jump scare，它甚至不吓人。它只是不该在那里。
+恐怖发生在最日常的界面里——analog horror 用的就是这一招。
 -->
 
 ---
-kicker: 学术对话的位置
+kicker: 机制六 · 失控
 ---
 
-# 三项文献，各自给了设计什么。
+# 从「我不理解」到「我不再操作」。
 
-| 文献 | 它的论点 | 对我的设计做了什么 | 阅读状态 |
+<div class="body col">
+<img src="/obs/redline.png" alt="第七天" style="height: 215px; width: auto; align-self: center; image-rendering: pixelated; border: 1px solid #333;" />
+<div class="rows">
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">① 怎么运作</span><p>第七天：汇报后桌面渐黑，红字浮出 BEHOLD HER THRONE, LAMB；回房后<b>床拒绝互动</b>；三十秒后玩家被强制走向湖边；结局全程无输入。</p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">② 为什么吓人</span><p>前五个机制剥夺的是<b>理解</b>，这一个剥夺<b>能动性</b>——而且发生在玩家已经忍耐了六天例行工作之后。</p></div>
+<div class="row hot" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">③ 学者 / 来源</span><p><b>Carroll</b>：恐怖由「不纯的」怪物引发——同时属于两个互斥范畴（血肉教堂＝建筑＋血肉；血星＝天体＋神性）。<i>（线索，未读）</i></p></div>
+<div class="row" style="grid-template-columns: 150px 1fr; padding: 7px 0"><span class="label">④ 我的决定</span><p>强制移动期间按键无效；结局不给选择、不给解释，只有标题。</p></div>
+</div>
+</div>
+
+::foot::
+
+宗教来源：《启示录》8:10–11（苦艾星从天上坠落）、6:12（月变血）；羔羊与宝座的措辞。
+
+<!--
+5:30–6:20 · 50 秒
+
+第七天，汇报交上去之后，桌面开始变黑，红字浮出来：BEHOLD HER THRONE, LAMB。
+回到房间，床不再让你睡。三十秒后你不能控制角色了，他自己走向湖边。结局没有输入。
+
+前面五条剥夺的是理解，这一条剥夺的是行动。而且它发生在你忍了六天之后——
+如果第一天就这样，玩家只会觉得莫名其妙。
+
+Carroll 会说这是「不纯的怪物」：血肉教堂是建筑加血肉，血星是天体加神性，
+两者都同时属于两个不该相容的范畴。这一条我还没读到正文，是预期。
+
+文化来源很直接：《启示录》里苦艾星从天上坠落，月亮变血。结局用的就是这套图像。
+-->
+
+---
+kicker: 文化来源谱系
+---
+
+# 六个机制，六条来路。
+
+| 机制 | 文化来源 | 具体接在哪 |
+|---|---|---|
+| ① 重复 | 日常恐怖 · 循环叙事 | 把熟悉变成不对劲，而不是把陌生塞给你 |
+| ② 不可知 | **宇宙恐怖**（Lovecraft 1927） | 恐惧来自未知；气氛重于情节；自然法则的「中止」 |
+| ③ 表格 | 卡夫卡式官僚 · 规则怪谈 | 机构不回应，只记录；规则无法被完全遵守 |
+| ④ 缺席 | **eerie**（Fisher）· 北极／孤岛恐怖 | *The Thing*、*The Shining*、*The Lighthouse* 的隔离设施 |
+| ⑤ 界面异化 | analog horror · 家用电脑恐怖 | 恐怖发生在屏幕里；多出来的那个图标 |
+| ⑥ 失控 | **宗教末世图像** · 哥特小说 | 《启示录》苦艾星与血月；哥特城堡＝当代科考设施 |
+
+::foot::
+
+「观测站」本身是当代哥特城堡：有历史、有前任、有秘密、被隔绝在荒野里。Walpole, *The Castle of Otranto* (1764) 以来的老配方。
+
+<!--
+6:20–7:05 · 45 秒
+
+这一页是整场展示的答案之一：六条来路。
+宇宙恐怖给「不可知」，eerie 给「缺席」，官僚与规则怪谈给「表格」，
+analog horror 给「界面」，启示录给「失控」，日常恐怖给「重复」。
+
+顺便说一句：观测站就是当代版的哥特城堡。哥特小说从十八世纪起就用一座有历史、
+有秘密、被隔绝的建筑来装恐怖，我只是把城堡换成科考站，把幽灵换成一个参数。
+-->
+
+---
+kicker: 学术对话
+---
+
+# 三篇文献，各接一条机制。
+
+| 文献 | 它的论点 | 接在我的哪条机制上 | 阅读状态 |
 |---|---|---|---|
-| **Daston**，〈On Scientific Observation〉，*Isis* 99:1 (2008), 97–110 | 观察在维持一套本体；此前的争论是探究中主观与客观因素的互动 | 星图：观察是被维持的实践，不是接收 | **已读摘要**（第 97 页），正文付费墙 |
-| **Gitelman**，*Paper Knowledge*，Duke UP (2014) | 文件是一种媒介类型，不是中立的容器 | 汇报表格决定「什么才算异常」 | **线索**，记录已核实，正文未读 |
-| **Fisher**，*The Weird and the Eerie*，Repeater (2016) | eerie：本该空无之处却有东西，或反之 | 恐怖来自例行公事，而非怪物 | **线索**，记录已核实，正文未读 |
+| **Lovecraft**,〈Supernatural Horror in Literature〉(1927) | 最古老最强烈的恐惧是对未知的恐惧；判准是气氛而非情节 | 机制② 不可知：不解释、不给答案 | **已读全文**（第一节，第 1、6–7 段） |
+| **Carroll**, *The Philosophy of Horror* (Routledge, 1990) | 恐怖由「不纯的」怪物引发——同时属于两个互斥范畴 | 机制⑥ 失控：血肉教堂、血星 | **线索**，正文未读 |
+| **Fisher**, *The Weird and the Eerie* (Repeater, 2016) | weird＝本不该存在；eerie＝本该空无之处却有东西 | 机制④ 缺席：观测站与森林 | **线索**，正文未读 |
 
 ::foot::
 
-检索途径与逐条查询词见 `research/references/bibliography.md`。
+检索与定位见 `research/references/bibliography.md`；Lovecraft 为公有领域全文。
 
 <!--
-8:00–8:40 · 40 秒
+7:05–8:00 · 55 秒
 
-不要念表格。指着第三列说：一篇给我实践，一篇给我仪器，一篇给我气氛——
-而我的机制就压在这三者之间的接缝上。
-阅读状态要说清楚，这是诚实，也是准备充分的表现。
+三篇不是随便配的，每篇接一条机制。
+Lovecraft 接不可知——这条我读完了全文，可以引，第一节第 1 段和第 7 段。
+Carroll 接失控——他讲怪物是范畴越界，血肉教堂和血星正好。
+Fisher 接缺席——eerie。
+
+必须说清楚：Carroll 和 Fisher 我还没读到正文，是线索，不是发现。
+Daston 和 Gitelman 我已经撤掉了——那是我上一版把项目当成官僚客观性来论证时用的，方向不对。
 -->
 
 ---
 kicker: 我的贡献
 ---
 
-# 是机制，不是主题。
+# 把「不可知」从阅读变成操作。
 
 <div class="body col">
-<div class="frame hot"><span class="label">三项文献还没解释的</span><div class="text">Daston 与 Gitelman 都把观察与记录描述为<b>集体</b>成就。我的观测站只有一个人。当维持这些实践的人只剩一张表格时，它们会变成什么？</div></div>
-<div class="frame"><span class="label red">设计给出的回答</span><div class="text">玩家把答案体验为一个<b>不肯接受 No 的按钮</b>。这不是「机构是盲的」的陈述，而是「仪器在操作者停下之后仍然工作」的演示。</div></div>
+<div class="frame hot"><span class="label">三篇文献合起来还缺的</span><div class="text">在洛夫克拉夫特那里，不可知是<b>被读到</b>的：主角读到禁书，读者读到他的恐惧。恐怖发生在阅读里。</div></div>
+<div class="frame"><span class="label red">我的设计做了什么</span><div class="text">不可知是<b>被操作</b>的：玩家每天亲手把那个东西画进星图，然后给它填一个 Yes。恐惧不来自「我读到了不该读的」，而来自<b>「我一直在为它做记录」</b>。</div></div>
 </div>
 
 <!--
-8:40–9:00 · 20 秒
+8:00–8:35 · 35 秒
 
-留给教室的那句话：「表格比观察活得更久。」
-如果有人问「这不就是个主题吗？」——答案是机制。主题是被陈述的，这个是被操作的。
-按下 Yes 成为唯一按钮的那一刻，鼠标在玩家手里。
--->
+如果只讲一句贡献，就是这一句。
+在洛夫克拉夫特那里，恐怖发生在阅读里——主角读禁书。
+在这里，恐怖发生在操作里——你每天把它画下来，然后给它填 Yes。
 
----
-kicker: 研究方法
----
-
-# 检索记录本身也是论证的一部分。
-
-| 查询 | 结果 |
-|---|---|
-| `scientific objectivity atlas observation` | **命中** Daston（*Isis*, 2008） |
-| `bureaucratic documents forms knowledge paperwork` | **失败**：返回移民与殖民行政的人类学，不是「文件作为媒介」 |
-| `title.search:paper knowledge` | **命中** Gitelman（Duke, 2014） |
-| `title.search:the weird and the eerie` | **命中** Fisher（Repeater, 2016） |
-
-> 检索**一个概念**给的是语境；检索**一部已知著作**给的是论证。第二次查询失败，第三次成功——这个差别我写进了研究日志。
-
-::foot::
-
-全部经 OpenAlex works API 完成；未使用简单网页检索。逐条查询与可获取性核查见书目。
-
-<!--
-9:00–9:30 · 30 秒
-
-这一页是方法，不是设计。保留它是因为它诚实地展示了课程要求的研究流程：
-检索、记录、失败、修正。失败的查询我没有删掉。
+第二个贡献是恐怖建立在例行公事上。多数恐怖游戏用事件打断日常；
+这款游戏让日常本身成为载体：七天里唯一的变化是一个数字，而那个数字是你自己写下来的。
 -->
 
 ---
 kicker: 技术栈
 ---
 
-# 用了什么，能做什么，卡在哪里。
+# 机制怎么被做出来的。
 
-| 技术 | 作用 | 为什么选它 | 局限 |
+| 技术 | 作用 | 为什么 | 局限 |
 |---|---|---|---|
-| **Godot 4.7.2 / GDScript** | 引擎与全部逻辑 | 免费、可脚本化、2D 强，且有**无头模式**可不开窗口跑测试 | 边界处类型松散，部分错误只在运行时暴露 |
-| **程序化绘制** | 几乎全部美术 | 像素锁在 320×180 网格上；每个元素都是带参数的函数，因此可测 | 无着色器管线 → 第四天的「模糊」其实是撕裂拖影 |
-| **固定虚拟分辨率** 320×180 / 桌面 640×360 | 构图 | 让「玩家居中」「地面行固定」成为**构造保证**而非事后检查 | 10 px 以下文字不可读；桌面须切换视口 |
-| **测试门禁** | 正确性 | 414 项模块检查 + 112 项完整七日通关 + 像素级移动规则测试 | 读回像素的两道门禁必须开窗口 |
+| **Godot 4.7.2 / GDScript** | 引擎与全部逻辑 | 免费、可脚本化、2D 强，有**无头模式**可不开窗口测试 | 边界处类型松散，部分错误只在运行时暴露 |
+| **程序化绘制** | 几乎全部美术 | 像素锁在 320×180；每个元素都是带参数的函数，可测 | 无着色器 → 第四天「模糊」是撕裂拖影 |
+| **固定虚拟分辨率** 320×180 / 桌面 640×360 | 构图 | 「玩家居中」「地面行固定」成为构造保证 | 10 px 以下文字不可读 |
+| **门控状态机 + 无头测试** | 保证七天完全一致 | 恐怖依赖节奏，节奏依赖顺序：414 项模块检查 + 112 项完整七日通关 | 读回像素的两道门禁必须开窗口 |
 | **缺失：音频** | — | — | 全程无声；是缺口，不是选择 |
 
 <!--
-9:30–9:50 · 20 秒
+8:35–9:20 · 45 秒
 
-用自己的话讲，不要念表。
-为什么 Godot：免费、可脚本化，而且无头模式让我能不开窗口证明整个七日循环的门控顺序不能被打乱。
-为什么程序化美术：320×180 下每个元素都要落在像素网格上，用代码画就没有素材管线、没有滤波伪影，而且每个元素都是可测的函数。
-诚实的局限：没有着色器，所以第四天不是真模糊；完全没有音频——记成缺口，不当艺术选择讲。
+用自己的话讲。为什么 Godot：免费、可脚本化，无头模式让我能不开窗口证明七天顺序不能被打乱——
+恐怖依赖节奏，节奏依赖顺序，所以顺序必须是被测试保证的，不能靠感觉。
+
+为什么程序化：320×180 每个元素都要落在像素网格上，用代码画就没有素材管线，而且每个元素都是可测的函数。
+
+诚实的局限：没有着色器，第四天不是真模糊；完全没有音频——这是缺口，不是设计。
+如果我说沉默是气氛，那我刚才讲的机制四就站不住了。
 -->
 
 ---
 kicker: 收尾
 ---
 
-# 表格比观察活得更久。
+# 恐怖不需要事件。
 
 <div class="body col">
-<div class="frame"><span class="label">我还欠这个论证的三件事</span><div class="text">① 把 Gitelman 与 Fisher 真正读完，各找到一段带页码的原文。<br />② 验证沉默是气氛，还是只是没做完。<br />③ 搞清楚玩家会把「强制 Yes」读成<mark>论点</mark>，还是读成 bug。</div></div>
+<div class="frame"><span class="label">我还欠这个拆解的两件事</span><div class="text">① 读完 Carroll 与 Fisher，各找到一段带页码的原文。<br />② 验证沉默：是气氛，还是只是没做完——这决定机制四成不成立。</div></div>
 </div>
 
 ::foot::
@@ -303,12 +360,15 @@ kicker: 收尾
 谢谢，欢迎提问。
 
 <!--
-9:50–10:00
+9:20–10:00 · 40 秒
 
-用那句话收尾，然后立刻主动说出三件没做完的事。自己认领缺口，比被问出来强。
+用一句话收尾：恐怖不需要事件，它需要节奏、不可知，和一个不肯听你说话的系统。
+
+然后主动说出两件没做完的事。自己认领缺口比被问出来强。
 
 可能的问题：
-1「为什么做游戏不做论文？」——因为这个主张讲的是被操作的仪器。论文能告诉读者表格拒绝 No，游戏让玩家自己撞上它。
-2「小游戏是玩笑吗？」——不是，它是反形式，是唯一给玩家他想要的数字的界面。
-3「强制 Yes 不就是糟糕 UX？」——有可能，而且这是设计文档里的未决问题。如果它被读成 bug，论证就失败，那我就得让「拒绝」可读，而不是靠解释。
+1「为什么不做成电影或小说？」——因为这些机制里有两个（表格、失控）需要玩家亲手操作才成立。
+2「小游戏是玩笑吗？」——不是。它是唯一给玩家他想要的数字的界面，是所有其他数字的反面。
+3「强制 Yes 不就是 bug？」——有可能，这是设计文档里的未决问题。如果被读成 bug，机制三就失效。
+4「为什么撤掉 Daston 和 Gitelman？」——因为那是把项目当成官僚客观性来论证，方向错了；这次拆的是恐怖机制。
 -->

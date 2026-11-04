@@ -1,110 +1,114 @@
 # 书目与检索记录 · 观测站日志
 
-纯 Markdown，不使用文献管理软件。每一条都记录：**怎么找到的**、**实际读了什么**、
+纯 Markdown，不使用文献管理软件。每条都记录：**怎么找到的**、**实际读了什么**、
 **哪些还只是线索**。未读过的搜索结果只是线索；只有读过的段落才是发现。
 
 检索途径：**OpenAlex works API**（`https://api.openalex.org/works`），按课程
 [scholarly-search 技能](../../../../.opencode/skills/scholarly-search/SKILL.md)的要求执行。
-没有自动化检索 Google Scholar。
+本项目的第三篇（洛夫克拉夫特）是**公有领域全文**，直接读取，不是检索结果。
 
 ---
 
-## 一、检索记录
+## 一、三项文献的分工
+
+拆解恐怖需要三种不同的东西，各由一篇承担：
+
+| 需要什么 | 用哪篇 | 作用 |
+| --- | --- | --- |
+| **文化来源**：这套恐怖从哪个传统来 | 洛夫克拉夫特（1927） | 宇宙恐怖的宣言：恐惧来自未知，气氛重于情节 |
+| **机制分析**：恐怖作为类型如何运作 | Carroll（1990） | 艺术恐怖（art-horror）与"不纯"的怪物：类型越界 |
+| **当代范畴**：缺席为什么会吓人 | Fisher（2016） | weird 与 eerie 的区分 |
+
+---
+
+## 二、检索记录
 
 | 日期 | 查询词（原样） | 途径 | 结果 |
 | --- | --- | --- | --- |
-| 2026-11-04 | `search=scientific objectivity atlas observation` | OpenAlex API，5 条 | **有效。** 首条即 Daston, "On Scientific Observation"（*Isis*, 2008）。另返回关于彗星 3I/ATLAS 的天文论文——"atlas"一词把实体地图集也拉了进来。 |
-| 2026-11-04 | `search=bureaucratic documents forms knowledge paperwork` | OpenAlex API，5 条 | **方向错误。** 返回移民与殖民行政的人类学研究（Sağlam 2024；Geoffrion & Cretton 2021；Ning 2022；Siddique 2016；Abrams 2016）。没有一项讨论"文件作为知识媒介"。仅作为背景线索保留。 |
-| 2026-11-04 | `filter=title.search:paper knowledge` | OpenAlex API，2 条 | **命中。** Gitelman, *Paper Knowledge*（Duke UP, 2014），专著与编著两条记录。 |
-| 2026-11-04 | `filter=title.search:the weird and the eerie` | OpenAlex API，2 条 | **命中。** Fisher, *The Weird and the Eerie*（Goldsmiths 机构库记录，2017），以及 B. G. Woodard 在 *Textual Practice* 的书评。 |
-| 2026-11-04 | `works/W1953000548?select=...,abstract_inverted_index,biblio` | OpenAlex API，单条 | **已读。** Daston 摘要全文，以及卷、期、页码。 |
+| 2026-11-04 | `filter=title.search:philosophy of horror` | OpenAlex API，3 条 | 只返回对 Carroll 该书的**书评**（*MLN* 1991；*Philosophical Quarterly* 1991）与 Fahy 的编著。专著本身未被索引为独立记录。 |
+| 2026-11-04 | `filter=title.search:the weird and the eerie` | OpenAlex API，2 条 | **命中** Fisher（Goldsmiths 机构库，2017）及 Woodard 书评。 |
+| 2026-11-04 | 直接读取 `hplovecraft.com/writings/texts/essays/shil.aspx` | 公有领域全文 | **已读全文**（约 2.6 万词）。见下节定位。 |
 
-**没来得及试、下一步该试的**：`scientific observation trained judgement`、
-`forms and formalization media`、`idle game labour repetition`、
-`walking simulator landscape`、`cosmic horror indifference nature`。
-
-**一条方法论教训。** 概念检索（"paperwork"）给的是语境，书名检索给的是论证。第二次
-查询失败，而第三次查询（已知书名）成功——这个差别值得写进展示，因为它说明了"检索"
-本身不是中立的。
+**此前失败的查询（保留记录）**：`bureaucratic documents forms knowledge paperwork` 返回移民
+与殖民行政人类学，与"恐怖机制"无关，已弃用。这个失败促成了本次方向调整——我原来把项目
+当成"官僚客观性"来论证，而它其实是**恐怖**。
 
 ---
 
-## 二、读过的工作
+## 三、读过的工作
 
-### Daston, Lorraine. "On Scientific Observation." *Isis* 99, no. 1 (2008): 97–110. DOI [10.1086/587535](https://doi.org/10.1086/587535). OpenAlex [W1953000548](https://openalex.org/W1953000548).
+### Lovecraft, H. P. "Supernatural Horror in Literature." 1927. 全文见 [hplovecraft.com](https://www.hplovecraft.com/writings/texts/essays/shil.aspx)。
 
-**已读**：完整摘要（第 97 页）。**未读**：正文——文章在付费墙后，我没有取得。
+**已读**：全文。**定位方式**：该文分节（I. Introduction；II. The Dawn of the Horror-Tale……），
+以下引文均出自**第一节（I. Introduction）**，按段落顺序标注。
 
-**设计文档中实际使用的定位：**
+**设计文档中实际使用的段落：**
 
-- "a turn toward ontology — more specifically, toward ontologies created and sustained
-  by observation"（摘要，第 97 页）。
-- 对四十年来共同关切的概括："interaction of subjective and objective factors in
-  scientific inquiry"（摘要，第 97 页）。
+- **第 1 段**：「The oldest and strongest emotion of mankind is fear, and the oldest and
+  strongest kind of fear is fear of the unknown.」
+- **第 6 段**：「A certain atmosphere of breathless and unexplainable dread of outer,
+  unknown forces must be present; and there must be a hint … of that most terrible
+  conception of the human brain—a malign and particular suspension or defeat of those
+  fixed laws of Nature which are our only safeguard against the assaults of chaos and
+  the daemons of unplumbed space.」
+- **第 7 段**：「Atmosphere is the all-important thing, for the final criterion of
+  authenticity is not the dovetailing of a plot but the creation of a given sensation.」
+- **第 7 段**：「The one test of the really weird is simply this—whether or not there be
+  excited in the reader a profound sense of dread, and of contact with unknown spheres
+  and powers; a subtle attitude of awed listening…」
 
-**相关性**：星图机制——观察是被维持的，而不是被接收的。
-
-**状态**：**部分阅读**。足以支撑摘要层面的引用；**不足以**对文章正文做任何论点归属。
+**相关性**：机制二（不可知）与整款游戏的"不解释"原则。
 
 ---
 
-## 三、已确认存在但尚未阅读（线索）
+## 四、已确认存在但尚未阅读（线索）
 
-### Gitelman, Lisa. *Paper Knowledge: Toward a Media History of Documents*. Durham, NC: Duke University Press, 2014. DOI [10.1215/9780822376767](https://doi.org/10.1215/9780822376767). OpenAlex [W4245455745](https://openalex.org/W4245455745).
+### Carroll, Noël. *The Philosophy of Horror, or Paradoxes of the Heart*. New York: Routledge, 1990.
 
-**状态：线索。** 元数据已对 OpenAlex 记录与 DOI 双重核实。正文未读。
+**状态：线索。** OpenAlex 只索引到两篇书评（W1983208800, *MLN* 1991；W3216584098,
+*Philosophical Quarterly* 1991），专著本身未作为独立记录收录。书名、作者、年份经两篇书评
+交叉确认；**正文未读**。
 
-**为什么列它**：汇报表格是本作的核心机制，而 Gitelman 是"文件作为媒介而非容器"这一
-思路最直接相关的学者。
+**预期取用**：Carroll 把恐怖定义为一种由「不纯的」怪物——同时属于两个互斥范畴的存在——
+所引发的「艺术恐怖（art-horror）」。我的「血肉教堂」（建筑 + 血肉）与血星（天体 + 神性）
+正是这种范畴越界。
 
-**展示前必须核实**：关于"表单（forms）"的具体主张，以及章、页。**在核实之前不要引用
-这本书。**
+**展示前必须核实**：这个定义的具体表述与页码。**核实前不要引用。**
 
-### Fisher, Mark. *The Weird and the Eerie*. London: Repeater, 2016. OpenAlex [W2799136475](https://openalex.org/W2799136475)（Goldsmiths 机构库记录标为 2017）。
+### Fisher, Mark. *The Weird and the Eerie*. London: Repeater, 2016. OpenAlex [W2799136475](https://openalex.org/W2799136475)（Goldsmiths 记录标 2017）。
 
-**状态：线索。** OpenAlex 记录把存放稿标为 2017，而此书通常被引为 2016。**引用前须向
-出版社核实年份。** 正文未读。
+**状态：线索。** 年份存疑（Repeater 版通常引作 2016，机构库记录为 2017），引用前须核实。
+正文未读。
 
-**为什么列它**：北方观测站作为 eerie 环境；以及"恐怖可以是结构性的而非怪物性的"
-这一主张。
+**预期取用**：weird = 本不该存在的东西；eerie = 本该空无之处却有东西，或本该有东西之处
+却空无。我的观测站属于后者。
 
-**展示前必须核实**：weird / eerie 区分的准确措辞及其页码。**核实之前不要引用。**
+**展示前必须核实**：区分的准确措辞与页码。
 
 ### Woodard, Benjamin Graham. "The Weird and the Eerie." *Textual Practice* 31 (2017). DOI [10.1080/0950236X.2017.1358704](https://doi.org/10.1080/0950236X.2017.1358704).
 
-**状态：线索。** 核实 Fisher 时发现。这是对 Fisher 的**书评**，不是第四个立场。如果
-原书始终无法取得，它可能是获取该书论证概要最省的途径——但书评是二手转述，引用时必须
-说明其性质。
+**状态：线索。** 对 Fisher 的书评，不是第四个立场。若原书无法取得，可作为二手概要——
+引用时必须标明其性质。
 
 ---
 
-## 四、可获取性核查（对应研究日志 2026-11-04「分配阅读」）
+## 五、文化来源（非学术文献，但构成设计的历史语境）
 
-| 文献 | 获取途径 | 结果 |
-| --- | --- | --- |
-| Daston 2008 | 出版商页面 + OpenAlex 摘要索引 | 摘要可得，正文付费墙 |
-| Gitelman 2014 | Duke UP；无开放获取版本 | **未取得** |
-| Fisher 2016 | Repeater；Goldsmiths 机构库仅封面 | **未取得** |
+这些不是学术论证，而是设计时明确参照的文化材料，单独列出以免与学术文献混淆：
 
----
-
-## 五、未采用的背景线索
-
-以下来自第二次（失败的）查询，**不构成本项目论证的一部分**，记录在此是为了让检索历史
-保持诚实：
-
-- Sağlam, Erol. "Paperwork as statecraft…" *Third World Quarterly* (2024). DOI [10.1080/01436597.2024.2387817](https://doi.org/10.1080/01436597.2024.2387817)
-- Geoffrion, Karine, and Viviane Cretton. "Introduction: Bureaucratic Routes to Migration…" *Anthropologica* 63, no. 1 (2021). DOI [10.18357/anthropologica6312021184](https://doi.org/10.18357/anthropologica6312021184)
-- Ning, Rundong. "Bureaucratic valves…" *Africa* (2022). DOI [10.1017/S0001972022000328](https://doi.org/10.1017/S0001972022000328)
-- Abrams, Thomas. "Disability and Bureaucratic Forms of Life." *Nordic Journal of Science and Technology Studies* 3, no. 1 (2016). DOI [10.5324/njsts.v3i1.2153](https://doi.org/10.5324/njsts.v3i1.2153)
-
-其中 Abrams 最接近我的问题（表单与生活经验），如果再多一天，我会先读它。
+| 材料 | 对设计的作用 |
+| --- | --- |
+| 《启示录》8:10–11（苦艾星从天上坠落）、6:12（月变血） | 结局的血星与「BEHOLD HER THRONE, LAMB」的末世图像 |
+| 北极／孤岛恐怖传统：*The Thing*（1982）、*The Shining*（1980）、*The Lighthouse*（2019） | 观测站的空间设定：被隔绝的设施、一个人、外部威胁 |
+| 哥特小说传统（Walpole 以降的"闹鬼城堡"） | 观测站是当代版本的哥特城堡：一座有历史、有前任、有秘密的建筑 |
+| Analog horror／家用电脑恐怖 | XP 桌面作为恐怖发生的界面 |
+| 规则怪谈（rules-based internet horror） | 「工作须知」作为一套必须遵守、但无法完全遵守的规则 |
 
 ---
 
 ## 六、引用规范
 
-1. 只对**已读**的段落做引用或论点归属，并给出页码或章节。
+1. 只对**已读**的段落做引用或论点归属，并给出页码／章节／段落定位。
 2. 未读的工作一律标为 **线索（Lead）**，在展示中口头说明。
 3. 不编造引文、页码或出版年。
 4. 二手转述（如书评）必须标明其为二手。
