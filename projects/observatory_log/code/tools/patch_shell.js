@@ -31,15 +31,19 @@ html, body { width: 100%; height: 100%; background: #000; overflow: hidden; }
 </style>`;
 
 const ABOUT_MARK = 'observation-log/light:about-note';
+// The wrapper is anchored to the bottom-right corner and laid out as a normal
+// column: the note sits above, the toggle stays pinned to the corner. Done the
+// other way round, opening the note drags the button into the middle of the screen.
 const ABOUT = `<style id="about-note-css">
 /* ${ABOUT_MARK} */
 #about-note { position: fixed; right: 10px; bottom: 10px; z-index: 2147483000;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
   font: 13px/1.55 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; color: #e8e8e8; }
 #about-note > button { font: inherit; color: #e8e8e8; background: rgba(20,20,20,.82);
-  border: 1px solid #6a6a6a; border-radius: 4px; padding: 5px 10px; cursor: pointer; }
+  border: 1px solid #6a6a6a; border-radius: 4px; padding: 5px 10px; cursor: pointer; flex: none; }
 #about-note > button:hover { background: rgba(40,40,40,.95); }
 #about-note > section { display: none; width: min(520px, calc(100vw - 40px));
-  margin-top: 8px; padding: 14px 16px; border-radius: 6px;
+  padding: 14px 16px; border-radius: 6px;
   background: rgba(12,12,12,.94); border: 1px solid #5a5a5a;
   max-height: 58vh; overflow: auto; }
 #about-note.open > section { display: block; }
@@ -48,7 +52,6 @@ const ABOUT = `<style id="about-note-css">
 #about-note em { color: #d98f8f; font-style: normal; }
 </style>
 <div id="about-note">
-  <button type="button" id="about-toggle" aria-expanded="false">About / 关于</button>
   <section role="note">
     <p>A fiction: Birch Lake, its Site 7 watching post, the thirteen-year cycle
     and all three endings are invented (<em>设</em>). What comes from history is
@@ -62,6 +65,7 @@ const ABOUT = `<style id="about-note-css">
     DeepSeek V4.1 Flash and ChatGPT 6.1 Sol revised it. Every design decision and
     every rejection was made by the author.</p>
   </section>
+  <button type="button" id="about-toggle" aria-expanded="false">About / 关于</button>
 </div>
 <script>
 (function () {
