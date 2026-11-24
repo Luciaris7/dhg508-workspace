@@ -12,8 +12,8 @@ Godot 4.7.2 的 2D 像素恐怖游戏《OBSERVATION LOG》，源码在根目录�
 | 目的 | 命令 | 期望 |
 | --- | --- | --- |
 | 静态门禁（<1 s） | `npm run check:static` | `CHECK: 52 passed, 0 failed` |
-| 单元测试（<1 s） | `npm run test:unit`（= `npx vitest run`） | `32 passed` |
-| 单元测试（备用，零依赖） | `npm run test:unit:node`（= `node --test`） | `pass 32`, `fail 0` |
+| 单元测试（<1 s） | `npm run test:unit`（= `npx vitest run`） | `33 passed` |
+| 单元测试（备用，零依赖） | `npm run test:unit:node`（= `node --test`） | `pass 33`, `fail 0` |
 | Godot 集成测试（8–12 min） | `npm run test:game` | `TEST RUN PASS` |
 | 浏览器 E2E（~1.5 min） | `npm run test:e2e` | `4 passed` |
 | 本地跑 Web 构建 | `npm run build:web` 然后 `npm run serve` → http://127.0.0.1:8788 | 标题画面 |
@@ -62,4 +62,4 @@ Godot 4.7.2 的 2D 像素恐怖游戏《OBSERVATION LOG》，源码在根目录�
 - `npm run test:unit` = `npx vitest run`（课程要求的命令）；`vitest.config.mjs` 把 `node:test` 别名到 `vitest`，断言代码一行都不用改；
 - `npm run test:unit:node` = `node --test`，零依赖，适合冷启动与 CI 兜底。
 
-两条都跑通、结果一致（32 项）。新增测试照这个写法，不要在文件里用 `require`。
+两条都跑通、结果一致（33 项）。新增测试照这个写法，不要在文件里用 `require`。

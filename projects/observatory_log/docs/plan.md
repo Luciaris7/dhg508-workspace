@@ -37,34 +37,49 @@ Verified at freeze time: no `TODO`/`FIXME` anywhere under `code/scripts/`
 | # | Requirement | Where it lives | State |
 | --- | --- | --- | --- |
 | 1 | Live `https://` build opens cleanly; About/footer note; keys ignored; redeploy; tests pass | `code/tools/patch_shell.js` (About note), `code/.gitignore`, live URL | About note added and guarded by a new build test · **v1.7 not yet redeployed** (needs Godot 4.7.2 + `wrangler login`) |
-| 2 | `evidence-table.tex` generated from the CSV, never typed | `paper/evidence.csv` → `paper/evidence-table.tex` via `paper/make_evidence_table.py` | Done, 11 rows |
-| 3 | `main.tex`, six sections, ~1,500–2,500 words, biblatex-chicago, ≥3 scholarly works | `paper/main.tex`, `paper/references.bib` | Done |
-| 4 | Compile on Overleaf, save `paper/design-paper.pdf` | `paper/design-paper.pdf` | See §5 |
-| 5 | Final repository checklist | this repo | Done except the two gaps in §5 |
+| 2 | `evidence-table.tex` generated from the CSV, never typed | `paper/evidence.csv` → `paper/evidence-table.tex` via `paper/make_evidence_table.py` | Done, 10 rows |
+| 3 | `main.tex`, six sections, ~1,500–2,500 words, biblatex-chicago, ≥3 scholarly works | `paper/main.tex`, `paper/references.bib` | Done, 2,425 words |
+| 4 | Compile to `paper/design-paper.pdf` | `paper/design-paper.pdf` | Done, 7 pages, XeLaTeX + Biber, 0 overfull boxes |
+| 5 | Final repository checklist | this repo | Done except the gap in §5 |
+
+The four gates, all run on **2026-11-25** against the build that is now live:
+
+| Gate | Command | Result |
+| --- | --- | --- |
+| static | `npm run check:static` | 52 passed, 0 failed (62 source files) |
+| unit | `npm run test:unit` / `npm run test:unit:node` | 33 passed, 0 failed, both runners |
+| Godot headless | `npm run test:game` | `TEST RUN PASS` — 44 scripts compile, ephemeris 0.006°, motion 24 cases, endings / menu / day5 / dream / ufo / cheat, three playthroughs at 277, 270 and 296 assertions |
+| browser E2E | `npm run test:e2e` with `GAME_URL` | 4 passed against <https://observation-log-9t9.pages.dev> |
 
 ## 4. What changed this week
 
+- **v1.7 deployed** to Cloudflare Pages (`observation-log`, branch `main`); the live
+  `index.html` now carries the About note and `/index.wasm` is served by the worker
+  as `application/wasm`.
 - **Scope notice** written into `code/docs/plan.md` §0.
 - **About note** injected into the exported shell by `code/tools/patch_shell.js`:
   four sentences on the historical context, the 据 / 推断 / 设 split and the AI
   tools. It sits in the shell rather than in a game scene precisely because the
   game content is frozen and the disclosure is not.
-- **A regression test for that note** in `code/tests/unit/build.test.mjs`, plus a
-  note that the About panel must stay collapsible rather than cover the canvas.
+- **A regression test for that note** in `code/tests/unit/build.test.mjs`, which is
+  also why the unit layer went from 32 to 33 assertions.
 - **Both outside testers recorded**, with what each one changed and which test now
   guards it: `code/docs/user-feedback.md` §3 and [`user-feedback.md`](user-feedback.md).
 - **The paper and its evidence table**, with the `schematic.png` figure generated
   by [`make_schematic.py`](make_schematic.py).
-- **One drift corrected**: `code/AGENTS.md` claimed 51 static checks; the gate
-  actually reports 52. The paper cites the number it can reproduce.
+- **Numbers corrected against measurement**: the static gate is 52 (documents said
+  51), the unit layer is 33 (said 32), the playthroughs are 277 / 270 / 296 (said
+  273 / 267 / 291), and `check.tscn` compiles 44 scripts (said 42). The paper cites
+  only numbers that were re-run on the day of hand-in.
 
-## 5. Known gaps at hand-in
+## 5. Known gap at hand-in
 
-1. **v1.7 is not on Cloudflare yet.** The live URL serves the previous build.
-   Rebuilding the web bundle needs Godot 4.7.2 and its Web export template, and
-   deploying needs `npx wrangler login` — neither exists on the machine this plan
-   was written on. The exact sequence is in the project README.
-2. **No stranger has played it.** Tester A is a friend of the author and tester B
+1. **No stranger has played it.** Tester A is a friend of the author and tester B
    is the commissioning player. Both are outside the build, neither is unfamiliar.
    Whether the game still frightens someone who knows the trick is unanswered and
    is stated as a limit in the paper rather than glossed.
+2. **The paper is 7 pages, not 3–6.** The word count (2,425) is inside the required
+   1,500–2,500; the extra pages come from the template's 12 pt / one-and-a-half
+   spacing, the evidence table and a twelve-entry Chicago bibliography. Cutting to
+   six pages would mean deleting two of the post-mortem's concrete failures.
+

@@ -15,7 +15,7 @@
 | 内容 | 序章 + 7 天 + 3 个结局 + UFO 彩蛋；一周目 40–60 分钟 |
 | 文案 | 英 / 中两套齐全，`tests/unit/copy.test.mjs` 守着键覆盖 |
 | 来源分级 | §8 的据 / 推断 / 设三层，写进论文的 `evidence.csv` |
-| 测试 | 静态 52 项 · 单元 32 项 · Godot 集成（星历 / 结局 / 菜单 / 行走 / 三条通关）· Playwright 4 项 |
+| 测试 | 静态 52 项 · 单元 33 项 · Godot 集成（星历 / 结局 / 菜单 / 行走 / 三条通关）· Playwright 4 项 |
 | 线上 | <https://observation-log-9t9.pages.dev>（v1.7 需重新 `npm run build:web && npm run deploy`） |
 | 论文 | `paper/`：`evidence.csv` → `evidence-table.tex` → `main.tex` → `design-paper.pdf` |
 

@@ -143,8 +143,8 @@ d.text((74, 726),
        font=F_LABEL, fill=MUTED)
 chain([
     ("check:static", ["52 checks · 62 files", "< 1 s"]),
-    ("unit", ["32 assertions", "< 1 s"]),
-    ("test:game", ["ephem 0.006 deg", "273 / 267 / 291 asserts", "8–12 min"]),
+    ("unit", ["33 assertions", "< 1 s"]),
+    ("test:game", ["ephem 0.006 deg", "277 / 270 / 296 asserts", "8–12 min"]),
     ("test:e2e", ["4 cases · live URL too", "~1.5 min"]),
 ], x=74, y=766, h=124, w=360, gap=60, title_font=F_BODY)
 

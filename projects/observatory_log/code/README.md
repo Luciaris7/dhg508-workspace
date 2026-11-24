@@ -133,16 +133,16 @@ Godot 侧也可用老入口：Windows 双击 `tests/run_all.bat`，或 `python t
 
 | 测试 | 内容 | 当前结果 |
 | --- | --- | --- |
-| `tests/check.tscn` | 全部脚本可编译 | 42 个文件 0 失败 |
+| `tests/check.tscn` | 全部脚本可编译 | 44 个文件 0 失败 |
 | `tests/day5_test.tscn` | 第 5 天铁皮屋被人影碰到 → 同化结局 → 主界面从第 5 天重来 | 全过 |
 | `tests/dream_test.tscn` | 梦境约 20 秒到教堂（撞不撞礁都一样）；HOMEWARD 2000 分到教堂、门不开、回主界面 | 全过 |
 | `tests/ending_test.tscn` | 三结局判定：线索门槛 4/5/9/10、摩斯编号、年份、存档往返、中英文文案齐全 | 全过 |
-| `tests/playthrough.tscn` | 完整通关：序章→Day1…Day7→结局→名单→CG→主界面，按玩家方式操作并逐拍断言；参数 `answers=… lang=en/zh route=bad/normal/good` | 献祭（英）273 项、修车绕回（中）267 项、逃离（英）291 项全过 |
+| `tests/playthrough.tscn` | 完整通关：序章→Day1…Day7→结局→名单→CG→主界面，按玩家方式操作并逐拍断言；参数 `answers=… lang=en/zh route=bad/normal/good` | 献祭（英）277 项、修车绕回（中）270 项、逃离（英）296 项全过（2026-11-25 实测） |
 | `tests/motion_test.tscn` | 强制行走：6 种帧间隔 × 4 段路程，验证不越过目标点 | 24 项全过 |
 | `tests/menu_test.tscn` | 警告页→标题→暂停→重开当日→回标题→继续 | 全过 |
 | `tests/ephem_test.tscn` | 星图精度（36 个日期，对照 Astronomy Engine） | 最大误差 0.006°（要求 <0.1°） |
 | `tests/shots.tscn` | 各场景截图到 `tests/_shots/`（`set=base/desk/mini/end/lake/zh`） | — |
-| `tests/unit/*.test.js` | 正典常量、双语键覆盖、文案 id、dist 契约 | 25 项全过 |
+| `tests/unit/*.test.js` | 正典常量、双语键覆盖、文案 id、dist 契约 | 33 项全过 |
 | `tests/e2e/smoke.spec.js` | 启动零报错、零 404、wasm 合法、输入有反应、手机视口 | 4 项全过 |
 | `tools/sim_minigame.py` | 小游戏平衡模拟 | 见 docs/DESIGN.md §7 |
 

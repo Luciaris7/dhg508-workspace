@@ -227,16 +227,16 @@ row names the file that would falsify it.
 The gates are layered so that the cheapest failure happens first. A static check
 over 62 source files validates \texttt{res://} references, JSON, the web export
 preset and accidental leaks of local paths and keys; re-running it on 24 November
-2026 gives 52 of 52 checks passing. A unit layer of 32 assertions covers the canon
+2026 gives 52 of 52 checks passing. A unit layer of 33 assertions covers the canon
 constants, bilingual key parity, the audio bus layout and the contents of the
 build directory. A headless Godot layer of roughly eight to twelve minutes runs the
 ephemeris against the thirty-six reference dates (maximum error 0.006 degrees
 against a 0.1 degree threshold), three complete playthroughs that assert at every
-beat (273, 267 and 291 assertions), a forced-walk regression over six frame
+beat (277, 270 and 296 assertions), a forced-walk regression over six frame
 intervals, and the ending, menu and dream scenes. A Playwright layer runs four
 cases against the built site and against the live URL: no console errors, no 404s,
-a real WebAssembly module, and a phone-sized viewport without clipping. The live
-build was serving correctly when this paper was written.\autocite{obslog2026live}
+a real WebAssembly module, and a phone-sized viewport without clipping; all four
+passed against the deployed build on 25 November 2026.\autocite{obslog2026live}
 
 \paragraph{Two testers outside the build.}
 The build was written by AI agents; both testers below are outside it. Tester A

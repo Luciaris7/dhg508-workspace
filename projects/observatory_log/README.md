@@ -33,11 +33,16 @@ Desktop instead of web: double-click `code/play.bat` with Godot 4.6+ installed, 
 
 ```bash
 cd code
-npm run check:static   # < 1 s   52 checks over 62 source files   <- verified 2026-11-24
-npm test               # < 1 s   32 unit assertions (vitest or node --test)
-npm run test:game      # 8-12 min headless Godot: ephemeris, endings, menu, forced walk, 3 playthroughs
-npm run test:e2e       # ~1.5 min Playwright, local dist or the live URL
+npm run check:static   # < 1 s     52 checks over 62 source files
+npm test               # < 1 s     33 unit assertions (vitest, or node --test)
+npm run test:game      # 8-12 min  headless Godot: ephemeris, endings, menu, walk, 3 playthroughs
+npm run test:e2e       # ~1.5 min  Playwright against dist/, or the live URL
 ```
+
+All four were run on **25 November 2026** against the build that is now live:
+52/52 static, 33/33 unit (both runners), `TEST RUN PASS` (44 scripts, ephemeris
+0.006°, 24 motion cases, playthroughs at 277 / 270 / 296 assertions), and 4/4
+Playwright cases against <https://observation-log-9t9.pages.dev>.
 
 `npm run check:static` is the gate that runs first: a broken `res://` path fails in
 under a second, long before a twelve-minute playthrough would notice it.

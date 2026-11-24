@@ -31,7 +31,7 @@
 ```powershell
 cd <仓库根目录>          # 就是包含 project.godot 与 package.json 的那一层
 npm run check:static     # 51 项  <1s
-npx vitest run           # 32 项  <1s   ← 课程要的 vitest
+npx vitest run           # 33 项  <1s   ← 课程要的 vitest
 npm run test:game        # TEST RUN PASS  8–12 min（可提前跑好，现场说明）
 npx playwright test      # 4 passed  ~1.5 min
 ```

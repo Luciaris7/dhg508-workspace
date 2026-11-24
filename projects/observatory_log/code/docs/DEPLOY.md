@@ -72,6 +72,11 @@ npx playwright test
 
 2026-11-17 实测：4 项全过（零控制台错误、零 404、`/index.wasm` 返回 `application/wasm` 39.5 MB、手机视口不裁切）。
 
+2026-11-25 再次实测（v1.7 部署后）：4 项全过；`dist` 12 个文件 19.6 MB、最大 9.68 MB；
+线上 `/index.html` 带 About 说明，`/index.wasm` 由 `_worker.js` 解压后返回 `application/wasm`。
+注意这次部署用 `node node_modules/wrangler/wrangler-dist/cli.js pages deploy ...` 直接调 CLI——
+`npm run deploy` 会经 `npx` 再 spawn 一层，在受限环境里容易先失败。
+
 再看三件事：
 
 1. 手机打开，横屏，确认能进标题、能走、能开电脑；
