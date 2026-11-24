@@ -17,3 +17,12 @@ test-results/
 playwright-report/
 .npm-cache/
 .wrangler/
+
+# --- secrets: these must never be committed (week-11 checklist) ---
+# .env and .env.* are already covered by the repository-level .gitignore; these two
+# are the Wrangler and Cloudflare credential files, which that file does not name.
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+export_credentials.cfg
