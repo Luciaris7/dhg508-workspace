@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBSERVATION LOG · 架构示意</title>
+<style>
+  :root{
+    --bg:#0a0b0d; --panel:#12141a; --line:#262b36; --ink:#d8d2c6; --dim:#8b8578;
+    --red:#a3232b; --red-soft:#5a1519; --amber:#c9a227; --cyan:#3f7d82;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:14px/1.6 "Fusion Pixel 12px Proportional", ui-monospace, "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+    padding:40px 24px 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-size:20px;letter-spacing:.18em;color:var(--ink);margin:0 0 6px}
+  h1 span{color:var(--red)}
+  .sub{color:var(--dim);font-size:12px;margin-bottom:36px}
+  h2{font-size:13px;letter-spacing:.16em;color:var(--amber);margin:46px 0 14px;font-weight:normal}
+  h2::before{content:"■ ";color:var(--red);font-size:10px;vertical-align:1px}
+  .note{color:var(--dim);font-size:12px;margin:8px 0 0}
+  .stack{display:flex;flex-direction:column;gap:6px}
+  .layer{display:grid;grid-template-columns:180px 1fr;gap:14px;align-items:center;
+         border:1px solid var(--line);background:var(--panel);padding:10px 14px}
+  .layer .tag{color:var(--red);font-size:11px;letter-spacing:.14em}
+  .layer .what{font-size:12px;color:var(--ink)}
+  .layer .what b{color:var(--amber);font-weight:normal}
+  .layer.off{opacity:.55}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .step{border:1px solid var(--line);background:var(--panel);padding:8px 12px;font-size:12px}
+  .step.hot{border-color:var(--red-soft);color:#e8b9b0}
+  .arrow{color:var(--red);font-size:12px}
+  .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}
+  .box{border:1px solid var(--line);background:var(--panel);padding:12px;font-size:12px;position:relative}
+  .box h3{margin:0 0 6px;font-size:11px;letter-spacing:.12em;color:var(--amber);font-weight:normal}
+  .box small{color:var(--dim);display:block;line-height:1.5}
+  .box.hot{border-color:var(--red);box-shadow:0 0 0 1px var(--red-soft) inset}
+  .box::after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);color:var(--red);font-size:14px}
+  .box:last-child::after{content:""}
+  .test{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .t{border:1px solid var(--line);background:var(--panel);padding:12px;font-size:12px}
+  .t b{display:block;color:var(--amber);font-weight:normal;font-size:11px;letter-spacing:.12em;margin-bottom:6px}
+  .t code{color:#9aa4b2;font-size:11px}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--amber);font-weight:normal;font-size:11px;letter-spacing:.1em}
+  td code{color:#a9b4c2}
+  .k{color:var(--cyan)}
+  .r{color:var(--red)}
+  footer{margin-top:56px;border-top:1px solid var(--line);padding-top:14px;color:var(--dim);font-size:11px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>OBSERVATION <span>LOG</span> · 架构示意</h1>
+  <div class="sub">
+    由 agent 依据 <code>scripts/main.gd</code>、<code>scripts/flow/flow.gd</code>、<code>tools/build_web.ps1</code> 与实测产物绘制 · 2026-11-16
+    · 纯静态页面，无外部依赖
+  </div>
+
+  <h2>1 · 渲染层：一个根节点，七个视口</h2>
+  <div class="stack">
+    <div class="layer"><div class="tag">LAYER 0 · WORLD</div><div class="what"><b>320×180 → ×2</b> 横版世界；<code>post.gdshader</code> 做 32 色调色板 + 抖动</div></div>
+    <div class="layer off"><div class="tag">LAYER 1 · DESKTOP</div><div class="what"><b>640×360</b> Windows XP 桌面，第一人称；<code>crt.gdshader</code> 扫线与暗角</div></div>
+    <div class="layer off"><div class="tag">LAYER 2 · MINIGAME</div><div class="what"><b>320×180 → ×2</b> The Gift of X；放进显示器时额外叠 CRT</div></div>
+    <div class="layer off"><div class="tag">LAYER 3 · ENDING</div><div class="what"><b>640×360</b> 结局过场与 CG</div></div>
+    <div class="layer"><div class="tag">LAYER 5 · OVERLAY</div><div class="what">独白 · 提示 · 日卡 · 红字 · 渐隐</div></div>
+    <div class="layer"><div class="tag">LAYER 8 · FX</div><div class="what"><code>fx.gdshader</code> 撕裂与震动，读取合成后的整屏</div></div>
+    <div class="layer"><div class="tag">LAYER 10 · MENU</div><div class="what">标题 / 暂停 / 设置，永不参与畸变</div></div>
+  </div>
+  <p class="note">自动加载：<code>G</code>（状态 · 存档 · 设置 · 字体）· <code>Txt</code>（中英文案）· <code>Sfx</code>（音频）。
+    <code>Main</code> 按 <code>mode</code> 分发输入，<code>Flow</code> 当作导演。</p>
+
+  <h2>2 · 一天的循环</h2>
+  <div class="flow">
+    <div class="step">起床 · 日卡</div><span class="arrow">→</span>
+    <div class="step">流程：发电机 / 打水 / 砍冰</div><span class="arrow">→</span>
+    <div class="step">上山调试天线（途中天黑）</div><span class="arrow">→</span>
+    <div class="step hot">回波测绘 · 摩斯电台 · 档案（可选线索）</div><span class="arrow">→</span>
+    <div class="step">电脑：星图软件 + 汇报页</div><span class="arrow">→</span>
+    <div class="step hot">提交 Yes / No</div><span class="arrow">→</span>
+    <div class="step">睡觉</div><span class="arrow">→</span>
+    <div class="step">次日</div>
+  </div>
+  <p class="note">第 5 天睡觉进入梦境（The Gift of X → 教堂）；第 6 天起汇报只接受 Yes；第 7 天汇报后强制走向湖边 → 结局。
+    结局判定只有一处：<code>G.can_escape()</code> = 摩斯编号已解 <span class="k">且</span> 线索 ≥ 8/10。</p>
+
+  <h2>3 · 模式路由</h2>
+  <table>
+    <tr><th>MODE</th><th>拿到输入</th><th>说明</th></tr>
+    <tr><td><code>menu</code></td><td><code>menu.gd</code></td><td>标题、暂停、设置、语言（首次按系统语言）</td></tr>
+    <tr><td><code>world</code></td><td><code>world.gd</code> / <code>flow.gd</code></td><td>A/D 走，E 交互，Esc 暂停；面板打开时 Esc 归面板</td></tr>
+    <tr><td><code>desktop</code></td><td><code>desktop.gd</code></td><td>双击图标、拖窗口、键盘输入汇报</td></tr>
+    <tr><td><code>dream</code></td><td><code>minigame.gd</code></td><td>第 5 天梦境，没有关闭按钮</td></tr>
+    <tr><td><code>cutscene</code> / <code>ending</code></td><td><code>flow.gd</code></td><td>只响应「加速独白」</td></tr>
+  </table>
+
+  <h2>4 · 构建 → 部署</h2>
+  <div class="pipe">
+    <div class="box"><h3>GODOT 4.7.2</h3><small>Web 预设，线程关闭<br>（不需要 COOP/COEP 头）</small></div>
+    <div class="box"><h3>builds/web</h3><small>index.pck 9.5 MB<br><span class="r">index.wasm 37.7 MB</span></small></div>
+    <div class="box hot"><h3>25 MiB 限制</h3><small>Pages 单文件上限<br>wasm 放不进去</small></div>
+    <div class="box"><h3>dist/</h3><small>index.wasm.gz 9.7 MB<br>+ <code>_worker.js</code> + <code>_headers</code></small></div>
+    <div class="box"><h3>*.pages.dev</h3><small>worker 用<br><code>DecompressionStream</code><br>还原成 wasm</small></div>
+  </div>
+  <p class="note">第一次尝试用 <code>Content-Encoding: gzip</code> 直接回传，本地 <code>wrangler pages dev</code> 又压了一次，
+    引擎报 <code>expected magic word 00 61 73 6d, found 1f 8b 08</code>；改为显式解压后本地与线上行为一致。</p>
+
+  <h2>5 · 测试分层</h2>
+  <div class="test">
+    <div class="t"><b>静态门禁 &lt;1s</b><code>npm run check:static</code><br>res:// 引用、JSON、Web 预设、泄漏</div>
+    <div class="t"><b>单元 0.3s</b><code>npm test</code><br>正典常量、双语键、文案 id、dist 契约</div>
+    <div class="t"><b>集成 8–12min</b><code>npm run test:game</code><br>星历、结局、菜单、行走、三条通关</div>
+    <div class="t"><b>E2E 1.5min</b><code>npm run test:e2e</code><br>启动、0 报错、0 404、输入、手机视口</div>
+  </div>
+
+  <h2>6 · 证据等级（据 / 推断 / 设）</h2>
+  <table>
+    <tr><th>等级</th><th>内容</th><th>由谁守</th></tr>
+    <tr><td class="k">据</td><td>行星位置（Astronomy Engine 预计算，36 个日期，误差 &lt; 0.1°）</td><td><code>tests/ephem_test.tscn</code></td></tr>
+    <tr><td class="k">据</td><td>OFL 字体与署名（Fusion Pixel、ark-pixel、cubic-11、Galmuri）</td><td><code>CREDITS.md</code></td></tr>
+    <tr><td>推断</td><td>「每 13 年一次血红极光」的传说、站点布局、每日流程</td><td><code>docs/MYSTERY_BIBLE.md</code></td></tr>
+    <tr><td class="r">设</td><td>血肉之神、血色教堂、星图上的未知天体、三种结局</td><td>结局门槛测试（10 线索 / 8 门槛 / 摩斯编号）</td></tr>
+  </table>
+
+  <footer>
+    仓库内同名 Markdown 版本：<code>docs/architecture.md</code>（Mermaid）· 计划与红线：<code>docs/plan.md</code> ·
+    反馈与回归：<code>docs/user-feedback.md</code>
+  </footer>
+</div>
+</body>
+</html>

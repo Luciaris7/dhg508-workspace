@@ -1,0 +1,15 @@
+# Cloudflare Pages headers for the Godot web build.
+# The wasm is served by functions/_middleware.js (gzip); everything else is static.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.pck
+  Cache-Control: public, max-age=0, must-revalidate
